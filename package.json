@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal Website for showcasing my work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/settleformore/settleformore.github.io.git"
+  },
+  "author": "Sabrina Settle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/settleformore/settleformore.github.io/issues"
+  },
+  "homepage": "https://github.com/settleformore/settleformore.github.io#readme",
+  "dependencies": {
+    "gatsby": "^2.23.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
