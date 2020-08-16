@@ -20,3 +20,9 @@ Resume
 Random facts:
 Other coders enjoy my surprisingly well documented code
 Music wise I listen to pretty much everything 
+
+
+changed from  "deploy": "gatsby build && gh-pages -d public -b master" to
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+in package json
+
