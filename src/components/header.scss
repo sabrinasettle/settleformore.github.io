@@ -1,0 +1,14 @@
+header {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // width: 100%;
+    white-space: nowrap;
+    h1, h2, h3, h4 {
+        display: inline-block;
+        width: 200px;
+    }
+}
+
+

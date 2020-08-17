@@ -1,16 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
+import {Link} from 'gatsby'
+import './header.scss'
+import "./navigation.scss"
+import HeaderNav from './navigation.js'
 
+function isActive( {isCurrent} ) {
+    return isCurrent ? {className: "active"} : null
+}
 
 const Header = () => {
     return (
-        <header>
-            <h1>Sabrina Settle</h1>
-            <Link to="/about/">About</Link>
-            <Link to="/contact/">Contact</Link>
-            
-            <p>I am a header</p>
-        </header>
+            // <div>
+                <header>
+                    <h3>Sabrina Settle</h3>
+                    <div id="nav">
+                        <Link to="/#about" getProps={isActive}>About</Link>
+                        <Link to="/#contact" getProps={isActive}>Contact</Link>
+                        {/* <Link to="/#resume" getProps={isActive}>Resume</Link> */}
+                    </div>
+                </header>
+            // </div>
     )
 }
 
