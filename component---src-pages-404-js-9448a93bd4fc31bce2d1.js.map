@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.js"],"names":["Err"],"mappings":"2FAAA,yDACe,SAASA","file":"component---src-pages-404-js-9448a93bd4fc31bce2d1.js","sourcesContent":["import React from \"react\"\nexport default function Err() {\n    // slides down using the smooth scroll npm \n    \n    \n}"],"sourceRoot":""}
