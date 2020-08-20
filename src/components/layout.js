@@ -1,14 +1,21 @@
 import Header from "./header.js"
-import Footer from "./footer.js"
+// import Footer from "./footer.js"
 
 import React from 'react'
 import {Link} from 'gatsby'
+import { graphql } from "gatsby"
+// import Img from "gatsby-image" 
+
 
 const Layout = () => {
+// export default function Layout({data}) {
+    // console.log(data)
     return (
+        
         <div>
             <Header />
             <div id="des">
+                {/* <Img fluid={data.image.childImageSharp.fluid}/> */}
                 <h2>Critical thinking full stack developer with a passion for development, learning, and teaching.</h2>
             </div>
             <div id="about">
@@ -33,4 +40,15 @@ const Layout = () => {
 
 }
 
+export const query = graphql`
+  query {
+    image: file(relativePath: {eq: "circle2.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 export default Layout

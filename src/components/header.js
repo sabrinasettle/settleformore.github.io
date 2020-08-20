@@ -2,13 +2,14 @@ import React from "react"
 import {Link} from 'gatsby'
 import './header.scss'
 import "./navigation.scss"
-import HeaderNav from './navigation.js'
+// import HeaderNav from './navigation.js'
 
 function isActive( {isCurrent} ) {
     return isCurrent ? {className: "active"} : null
 }
 
 const Header = () => {
+    
     return (
             // <div>
                 <header>

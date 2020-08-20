@@ -1,8 +1,8 @@
 var plugins = [{
-      plugin: require('/Users/sabrina/Desktop/DeployedSite/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/sabrina/Desktop/DeployedSite/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"GatsbyJS","short_name":"GatsbyJS","start_url":"/","background_color":"#f7f0eb","theme_color":"#a2466c","display":"standalone","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":null},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
