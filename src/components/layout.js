@@ -15,10 +15,16 @@ const Layout = () => {
         
         <div>
             <Header />
-            <div id="des">
-                <Image />
-                {/* <Img fluid={data.image.childImageSharp.fluid}/> */}
-                <h2>Critical thinking full stack developer with a passion for development, learning, and teaching.</h2>
+            <div id="top-part">
+                <div id="top-image">
+                        <Image />
+
+                 </div>
+
+                <div id="des">
+                    {/* <Img fluid={data.image.childImageSharp.fluid}/> */}
+                    <h2>Critical thinking full stack developer with a passion for development, learning, and teaching.</h2>
+                </div>
             </div>
             <div id="about">
                 <h2>About</h2>
