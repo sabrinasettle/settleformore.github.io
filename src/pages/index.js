@@ -3,7 +3,7 @@ import React from "react"
 // import Footer from "../components/footer.js"
 // import Header from "../components/header.js"
 import Layout from "../components/layout.js"
-import { graphql } from "gatsby"
+import { StaticQuery,graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import "../styles/index.scss"
@@ -17,15 +17,13 @@ export default function Home({data}) {
   }
   return (
     <div>
-      <Img fluid={data.file.childImageSharp.fluid}/>
       <Layout/>
-      
     </div>
   )
 }
 
 export const query = graphql`
-  query MyQuery {
+  query Image {
     file(relativePath: {eq: "circle2.png"}) {
       childImageSharp {
         fluid(maxWidth: 500) {

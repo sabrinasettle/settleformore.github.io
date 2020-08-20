@@ -4,6 +4,7 @@ import Header from "./header.js"
 import React from 'react'
 import {Link} from 'gatsby'
 import { graphql } from "gatsby"
+import Image from "./backgorund-image.js"
 // import Img from "gatsby-image" 
 
 
@@ -15,6 +16,7 @@ const Layout = () => {
         <div>
             <Header />
             <div id="des">
+                <Image />
                 {/* <Img fluid={data.image.childImageSharp.fluid}/> */}
                 <h2>Critical thinking full stack developer with a passion for development, learning, and teaching.</h2>
             </div>
