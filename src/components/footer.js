@@ -4,7 +4,7 @@ import "./footer.scss"
 const Footer = () => {
     return (
         <footer>
-            <p> This is the footer</p>
+            <p> © Sabrina Settle 2020 </p>
         </footer>
     )
 }

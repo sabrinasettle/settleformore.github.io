@@ -17,7 +17,6 @@ const Header = () => {
                     <div id="nav">
                         <Link to="/#about" getProps={isActive}>About</Link>
                         <Link to="/#contact" getProps={isActive}>Contact</Link>
-                        {/* <Link to="/#resume" getProps={isActive}>Resume</Link> */}
                     </div>
                 </header>
             // </div>

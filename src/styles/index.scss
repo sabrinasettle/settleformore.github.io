@@ -5,6 +5,7 @@ body {
     padding-left: 10%;
     padding-right: 10%;
     color: rgb(39, 39, 39);
+    // color: rgb(184, 184, 184);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,8 +16,13 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: black;
     text-decoration: none;
-    font-family: 'Merriweather', serif;
-    font-size: 19px;
+    font-family: 'Reenie Beanie', cursive;
+
+    // font-family: 'Cedarville', cursive;
+    font-size: 40px;
+}
+a:hover {
+    color: white;
 }
 
 #des {
@@ -24,16 +30,11 @@ a {
 }
 
 #top-image-circle {
-    width: 60%;
+    width: 55%;
     padding-left: 20%;
     .circle {
         opacity: 0.8;
     }
-}
-
-.image-background {
-    width: 60%;
-    padding-left: 20%;
 }
 
 #top-part #des{
@@ -63,6 +64,7 @@ a {
     position: relative;
     width: 80%;
     line-height: 1.3;
+    margin-bottom: 20%;
     p {
         font-size: 25px;
         font-family: 'Roboto', sans-serif;
@@ -78,7 +80,7 @@ a {
 
 #about #text {
     position: absolute;
-    top: 50px;
+    top: 70px;
     // left: 16px;
     // position: absolute;
     z-index: 999;
@@ -101,12 +103,12 @@ a {
 }
 .image-stack {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 0.5fr);
     position: relative;
 }
 
 .image-stack__item--top {
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 6;
     grid-row: 1; // must be on the same row as the other image
     padding-top: 20%; // this pushes the image down, and keeps it proportional as it resizes
     z-index: 1; // make this image render on top of the bottom
@@ -115,4 +117,22 @@ a {
 .image-stack__item--bottom {
     grid-column: 4 / -1;
     grid-row: 1; // make this image be on the same row
+}
+
+#contact {
+    line-height: 1.3;
+    margin-bottom: 20%;
+    white-space: nowrap;
+    h1 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 25px;
+        font-family: 'Roboto', sans-serif;
+        // p {
+            display: inline;
+        //   }
+
+    }
+    
 }
