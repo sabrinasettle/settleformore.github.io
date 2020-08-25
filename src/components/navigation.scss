@@ -8,17 +8,19 @@
 #nav a {
   float: left;
   display: block;
-  color: black;
+  color: rgb(39, 39, 39);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 40px;
+  font-family: 'Reenie Beanie', cursive;
+
 }
 
 /* Change the color of links on hover */
 #nav a:hover {
-  background-color: rgb(128, 128, 128);
-  color: black;
+  // background-color: rgb(128, 128, 128);
+  color: white;
 }
 
 /* Add a color to the active/current link */
@@ -27,6 +29,8 @@
   color: black;
 }
 
+
+// havent worked with these yet
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {

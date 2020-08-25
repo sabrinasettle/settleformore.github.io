@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby" // to query for image data
 import Img from "gatsby-image"
 
 
-const Image = () => (
+const Circle = () => (
     <StaticQuery
       query={graphql`
         query {
@@ -20,7 +20,7 @@ const Image = () => (
       render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} className="circle"/>}
     />
   )
-  export default Image
+  export default Circle
 
 // export default function BI() {
 //     const data = useStaticQuery(graphql`

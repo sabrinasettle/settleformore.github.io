@@ -13,7 +13,7 @@ const Header = () => {
     return (
             // <div>
                 <header>
-                    <h3>Sabrina Settle</h3>
+                    <h1>Sabrina Settle</h1>
                     <div id="nav">
                         <Link to="/#about" getProps={isActive}>About</Link>
                         <Link to="/#contact" getProps={isActive}>Contact</Link>

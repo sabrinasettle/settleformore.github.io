@@ -1,5 +1,5 @@
 header {
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +7,10 @@ header {
     white-space: nowrap;
     h1, h2, h3, h4 {
         display: inline-block;
-        width: 200px;
+        width: 400px;
+        font-size: 60px;
+        font-weight: 500;
+        font-family: 'Reenie Beanie', cursive;
     }
 }
 
