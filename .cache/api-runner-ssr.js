@@ -9,7 +9,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-mdx/gatsby-ssr'),
-      options: {"plugins":[],"extensions":[".mdx",".md"]},
+      options: {"plugins":[],"extensions":[".mdx",".md"],"defaultLayout":"/Users/sabrina/Desktop/settleformore.github.io/src/components/blog-post-layout.js"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
