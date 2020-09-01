@@ -17,16 +17,12 @@
 
 }
 
-/* Change the color of links on hover */
 #nav a:hover {
-  // background-color: rgb(128, 128, 128);
   color: white;
 }
 
-/* Add a color to the active/current link */
 #nav a.active {
-  background-color: #4CAF50;
-  color: black;
+  color: white;
 }
 
 
