@@ -2,20 +2,22 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link, graphql } from 'gatsby';
 
-// import SEO from 'react-seo-component';
+import SEO from 'react-seo-component';
 
 import "../styles/index.scss"
 
 function BlogIndex ({data}) {
-  const { edges: posts } = data.allMdx
+  // const { edges: posts } = data.allMdx
   return (
     <Layout>
       <ul>
-        {posts.map(({ node }) => {
-          const { title } = node.frontmatter
+      {data.allMdx.nodes.map(({ id, frontmatter, fields }) => {
+        // {data.allMdx.nodes(({ node, frontmatter }) => {
+          // const { title } = frontmatter.title
+          // const { path } = frontmatter.path
           return (
-            <li key={node.id}>
-              <Link to={node.fields.slug}>{title}</Link>
+            <li key={id}>
+              <Link to={frontmatter.path}>{frontmatter.title}</Link>
             </li>
           )
         })}
@@ -64,19 +66,15 @@ export default BlogIndex
 export const pageQuery = graphql`
   query blogIndex {
     allMdx(
-        filter: { frontmatter: { published: { eq: true } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { published: { eq: true } } }      
       ) {
-      edges {
-        node {
+        nodes {
           id
-          excerpt
-          fields {
-            slug
-          }
           frontmatter {
             title
+            path
           }
-        }
       }
     }
   }
