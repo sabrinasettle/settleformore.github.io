@@ -33,7 +33,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     pages.forEach((page) => {
       actions.createPage({
         path: page.frontmatter.path,
-        component: require.resolve('./src/components/blog-post-layout.js'),
+        component: require.resolve('./src/components/blog/blog-post-layout.js'),
         context: {
           pathSlug: page.frontmatter.path,
         },

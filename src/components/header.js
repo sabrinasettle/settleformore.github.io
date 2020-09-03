@@ -1,14 +1,18 @@
 import React from "react"
-import './header.scss'
-import "./navigation.scss"
+import './styles/header.scss'
+import "./styles/navigation.scss"
 import HeaderNav from "./navigation.js"
+import {Link} from 'gatsby'
 
 const Header = () => {
     return (
-        <header>
-            <h1>Sabrina Settle</h1>
-            <HeaderNav />
-        </header>
+        <div class="container">
+            <header>
+                <Link to="/">Sabrina Settle</Link>
+                {/* <h1>Sabrina Settle</h1> */}
+                <HeaderNav />
+            </header>
+        </div>
     )
 }
 

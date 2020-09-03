@@ -24,7 +24,9 @@ const Layout = ({ children }) => {
                     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Reenie+Beanie&display=swap" rel="stylesheet"></link>
             </Helmet>
             <Header />
-            {children}
+            <div class="center">
+                {children}
+            </div>
             <Footer />
         </div>
     )
