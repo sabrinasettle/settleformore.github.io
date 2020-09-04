@@ -21,11 +21,11 @@ export default function About() {
             <div id="about-grid">
                 <AboutPartOne />
                 <AboutPartTwo />
-                <div class="image-stack">
-                    <div class="image-stack__item--bottom">
+                <div className="image-stack">
+                    <div className="image-stack__item--bottom">
                         <Stain />
                     </div>
-                    <div class="image-stack__item--top">
+                    <div className="image-stack__item--top">
                         <Drawing1 />
 
                     </div>

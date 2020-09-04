@@ -17,12 +17,12 @@ const Main = () => {
             </div> */}
 
             <div id="grid-top-part">
-              <div class="image-stack__item--top">
+              <div className="image-stack__item--top">
                 <div id="des">
                     <h1>Critical thinking full stack developer with a passion for development, learning, and teaching.</h1>
                 </div>
               </div>
-              <div class="image-stack__item--bottom">
+              <div className="image-stack__item--bottom">
                   <Circle />
               </div>
             </div>

@@ -8,9 +8,9 @@ import emitter from "./emitter"
 import { apiRunner, apiRunnerAsync } from "./api-runner-browser"
 import { setLoader, publicLoader } from "./loader"
 import DevLoader from "./dev-loader"
-import syncRequires from "$virtual/sync-requires"
+import syncRequires from "./sync-requires"
 // Generated during bootstrap
-import matchPaths from "$virtual/match-paths.json"
+import matchPaths from "./match-paths.json"
 
 window.___emitter = emitter
 
@@ -52,15 +52,6 @@ apiRunnerAsync(`onClientEntry`).then(() => {
             })
             parentSocket.emit(`develop:restart`)
           }
-        })
-
-        // Prevents certain browsers spamming XHR 'ERR_CONNECTION_REFUSED'
-        // errors within the console, such as when exiting the develop process.
-        parentSocket.on(`disconnect`, () => {
-          console.warn(
-            `[socket.io] Disconnected. Unable to perform health-check.`
-          )
-          parentSocket.close()
         })
       }
     })

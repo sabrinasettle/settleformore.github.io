@@ -31,7 +31,7 @@
 // import { graphql } from 'gatsby';
 // import { MDXRenderer } from 'gatsby-plugin-mdx';
 // import React from 'react';
-import Layout from '../Layout';
+import Layout from '../layout.js';
 
 // export const query = graphql`
 //   query($pathSlug: String!) {
@@ -72,21 +72,45 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
-import { Circle } from "../images/circle-image.js"
-const shortcodes = { Link, Circle } // Provide common components here
+import { useSiteMetadata } from '../../hooks/useSiteMetadata.js';
+import SEO from "../seo.js"
+const shortcodes = { Link } // Provide common components here
 
 export default function Post({ data: { mdx } }) {
+
+  const {
+    title,
+    authorName,
+    siteUrl,
+  } = useSiteMetadata();
+  // title={title}
+  // description={excerpt}
+  // image={
+  //   cover === null
+  //     ? `${siteUrl}${image}`
+  //     : `${siteUrl}${cover.publicURL}`
+  // }
+  // pathname={`${siteUrl}${fields.slug}`}
+  // siteLanguage={siteLanguage}
+  // siteLocale={siteLocale}
+  // twitterUsername={twitterUsername}
+  // author={authorName}
+  // article={true}
+  // publishedDate={date}
+  // modifiedDate={new Date(Date.now()).toISOString()}
+
   return (
     <div>
       <Layout>
+        <SEO />
         <Link to="/blog">Back</Link>
-        <div class="post">
-          <div class="title">
+        <div className="post">
+          <div className="title">
             <h1>{mdx.frontmatter.title}</h1>
             <h1>{mdx.frontmatter.date}</h1>
           </div>
           <MDXProvider components={shortcodes}>
-            <div class="body">
+            <div className="body">
             <MDXRenderer>{mdx.body}</MDXRenderer>
             </div>
           </MDXProvider>

@@ -2,19 +2,23 @@ import React from "react"
 import Layout from "../components/layout.js"
 import { Link, graphql } from 'gatsby';
 
-import SEO from 'react-seo-component';
+// import SEO from 'react-seo-component';
 
 import "../styles/index.scss"
 
 export default function BlogIndex ({data}) {
   return (
     <Layout>
-      <h1>Articles</h1>
-      <h2> I write about web stuff while geeking out over data and databases  </h2>
-      <ul>
+      <h1 className="page-header">
+        Articles
+      </h1>
+      <h2 className="page-sub-header"> 
+        I write about fullstack web development sprinkled with my favorite popular (and not so popluar) culture referneces gifs and emojis 
+      </h2>
+      <ul id="blog-posts">
         {data.allMdx.nodes.map(({ id, frontmatter }) => {
           return (
-            <li key={id}>
+            <li className="article-list" key={id}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
             </li>
           )

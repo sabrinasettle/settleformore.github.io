@@ -6,7 +6,7 @@ import {Link} from 'gatsby'
 
 const Header = () => {
     return (
-        <div class="container">
+        <div className="container">
             <header>
                 <Link to="/">Sabrina Settle</Link>
                 {/* <h1>Sabrina Settle</h1> */}

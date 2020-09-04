@@ -2,7 +2,10 @@ module.exports = {
     pathPrefix: "/settleformore.github.io",
     siteMetadata: {
         title: 'Sabrina Settle',
-        description: 'A personal website and blog.',
+        siteUrl: "https://settleformore.github.io/",
+        description: 'Sabrina Settle is a fullstack devloper, who enjoys designing databases and making puns.',
+        authorName: 'Sabrina Settle',
+        keywords: 'fullstack developer, art, code',
     },
     plugins: [
         {
@@ -31,9 +34,8 @@ module.exports = {
               name: 'GatsbyJS',
               short_name: 'GatsbyJS',
               start_url: '/',
-              background_color: '#f7f0eb',
-              theme_color: '#a2466c',
               display: 'standalone',
+              icon: 'src/images/icons/favicon.png'
             },
         },
         'gatsby-plugin-react-helmet',
@@ -42,6 +44,20 @@ module.exports = {
             options: {
               extensions: ['.mdx', '.md'],
               defaultLayout: require.resolve('./src/components/blog/blog-post-layout.js'),
+            },
+        },
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-giphy`,
+                        options: {
+                            giphyApiKey: `<your-api-key>`,
+                        },
+                    },
+
+                ],
             },
         },
     ]

@@ -3,7 +3,7 @@
     "develop": {
       "plugins": [
         {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-mdx/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
@@ -35,7 +35,7 @@
     "develop-html": {
       "plugins": [
         {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-mdx/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
@@ -67,7 +67,7 @@
     "build-html": {
       "plugins": [
         {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-mdx/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
@@ -99,7 +99,7 @@
     "build-javascript": {
       "plugins": [
         {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-mdx/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
