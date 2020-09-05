@@ -14,11 +14,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: black;
+    // color: black;
+    color: rgb(39, 39, 39);
     text-decoration: none;
     font-family: 'Reenie Beanie', cursive;
     font-size: 40px;
 }
+
 a:hover {
     color: white;
 }
@@ -61,7 +63,6 @@ li.article-list{
         font-size: 1.5rem;
     }
     margin-top: 30px;
-    // margin-bottom: 30px;
 }
 
 .content {
@@ -89,6 +90,18 @@ li.article-list{
     height: 300px;
 }
 
+
+#about-nav-container {
+
+}
+
+ul#about-nav{
+    margin: 0;
+    padding: 0;
+    a{
+        color:red;
+    }
+}
 #about {
     position: relative;
     width: 80%;
@@ -106,7 +119,6 @@ li.article-list{
 }
 
 #about-two {
-    // text-align: right;
     position: relative;
     width: 80%;
     line-height: 1.3;
@@ -122,15 +134,19 @@ li.article-list{
     }
     #right{
         top:0;
-        // right:0;
     }
 }
 
 .text {
+    padding-top: 40px;
+    width: 80%;
+}
+
+.text#layer{
     position: absolute;
     top: 70px;
     z-index: 999;
-    width: 80%;
+    // padding-top: 40px;
 }
 
 #image-about {
@@ -147,9 +163,6 @@ li.article-list{
 #contact {
     position: relative;
     line-height: 1.3;
-    margin-bottom: 20%;
-    white-space: nowrap;
-    width: 80%;
     h1 {
         font-size: 50px;
     }
@@ -166,22 +179,22 @@ li.article-list{
 #about-grid {
     display: grid;
     grid-gap: 1.875rem;
-    // grid-auto-rows: max-content;
     grid-auto-rows: minmax(min-content, max-content);
-    // grid-template-rows: repeat(4, 0.2fr);
     padding-bottom: 5%;
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
     #about{
         grid-row: 1 / 2;
     }
     #about-two{
         grid-row: 2 / 3;
-        
     }
     #contact {
         grid-row: 4 / 5;
     }
     .image-stack {
-       
         display: grid;
         grid-template-columns: repeat(12, 0.5fr);
         position: relative;
@@ -197,6 +210,11 @@ li.article-list{
         grid-column: 4 / 12;
         grid-row: 1; // make this image be on the same row
     }
+}
+
+#about-grid > * {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer {
@@ -273,11 +291,8 @@ header {
         }
     }
     #about-grid {
-        margin-left: 10%;
+        // margin-left: 10%;
     }
-    .center {
-        width: 100%;
-        margin-left: 0;
-    }
+    
     
 }
