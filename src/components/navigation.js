@@ -8,10 +8,16 @@ function isActive( {isCurrent} ) {
 
 const HeaderNav = () => {
     return (
-        <div id="nav">
-            <Link to="/about" getProps={isActive}>About</Link>
-            <Link to="/blog" getProps={isActive}>Blog</Link>
-        </div>
+        <nav className="site-nav">
+            <ul className="site-nav-list">
+                <li>
+                    <Link to="/about" getProps={isActive}>About</Link>
+                </li>
+                <li>
+                    <Link to="/blog" getProps={isActive}>Blog</Link>
+                </li>
+            </ul>
+        </nav>
     )
 }
 

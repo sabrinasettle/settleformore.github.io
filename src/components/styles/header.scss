@@ -1,17 +1,11 @@
-header {
-    // border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // width: 100%;
-    white-space: nowrap;
-    h1, h2, h3, h4 {
-        display: inline-block;
-        width: 400px;
-        font-size: 60px;
-        font-weight: 500;
-        font-family: 'Reenie Beanie', cursive;
-    }
+.container {
+    max-width: 100rem;
+    padding: 0 2rem;
 }
 
-
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.875rem 0;
+    width: 100%;
+}

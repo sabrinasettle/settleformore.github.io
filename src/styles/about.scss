@@ -1,0 +1,136 @@
+#about-nav-container {
+    padding-top: 1em;
+    padding-left: 5%;
+    padding-bottom: 1em;
+    width: 80%;
+}
+
+
+
+ul#about-nav{
+    margin: 0;
+    padding: 0;
+    a {
+        padding-left: 10%;
+        // padding-right: 5%;  
+        // color:red;
+    }
+}
+#about {
+    position: relative;
+    width: 80%;
+    line-height: 1.3;
+    p {
+        font-size: 25px;
+        font-family: 'Roboto', sans-serif;
+    }
+    a:hover{
+        color: white;
+    }
+    h1 {
+        font-size: 50px;
+    }
+}
+
+#about-two {
+    position: relative;
+    width: 80%;
+    line-height: 1.3;
+    p {
+        font-size: 25px;
+        font-family: 'Roboto', sans-serif;
+    }
+    a:hover{
+        color: white;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    #right{
+        top:0;
+    }
+}
+
+.text {
+    padding-top: 40px;
+    width: 80%;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.text#layer{
+    position: absolute;
+    top: 70px;
+    z-index: 999;
+    // padding-top: 40px;
+}
+
+// #image-about {
+    .paint-stroke {
+        opacity: 0.65;
+        max-width: 600px;
+        max-height: 500px;
+        min-width: 600px;
+        min-height: 500px;
+    }
+// }
+
+
+#contact {
+    position: relative;
+    line-height: 1.3;
+    h1 {
+        font-size: 50px;
+    }
+    .text {
+        p {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            display: inline;
+        }
+    }
+    
+}
+
+#about-grid {
+    display: grid;
+    grid-gap: 1.875rem;
+    grid-auto-rows: minmax(min-content, max-content);
+    padding-bottom: 5%;
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+    #about{
+        grid-row: 1 / 2;
+    }
+    #about-two{
+        grid-row: 2 / 3;
+    }
+    #contact {
+        grid-row: 4 / 5;
+    }
+    .image-stack {
+        display: grid;
+        grid-template-columns: repeat(12, 0.5fr);
+        position: relative;
+        grid-row: 3 / 4;
+    }
+    .image-stack__item--top {
+        grid-column: 1 / span 6;
+        grid-row: 1; // must be on the same row as the other image
+        padding-top: 20%; // this pushes the image down, and keeps it proportional as it resizes
+        z-index: 1; // make this image render on top of the bottom
+    }
+    .image-stack__item--bottom {
+        grid-column: 4 / 12;
+        grid-row: 1; // make this image be on the same row
+    }
+}
+
+#about-grid > * {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

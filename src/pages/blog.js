@@ -2,6 +2,9 @@ import React from "react"
 import Layout from "../components/layout.js"
 import { Link, graphql } from 'gatsby';
 
+import "../styles/blog.scss"
+
+
 // import SEO from 'react-seo-component';
 
 import "../styles/index.scss"

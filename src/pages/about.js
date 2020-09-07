@@ -9,6 +9,7 @@ import AboutNav from "../components/about/aboutnav.js"
 import Stain from "../components/images/stain-image.js"
 import Drawing1 from "../components/images/drawing-image.js"
 // import PaintStroke from "../components/images/paint_stroke.js"
+import "../styles/about.scss"
 
 export default function About() { 
     

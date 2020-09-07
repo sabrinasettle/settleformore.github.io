@@ -100,24 +100,23 @@ export default function Post({ data: { mdx } }) {
   // modifiedDate={new Date(Date.now()).toISOString()}
 
   return (
-    <div>
       <Layout>
         <SEO />
-        <Link to="/blog">Back</Link>
-        <div className="post">
-          <div className="title">
-            <h1>{mdx.frontmatter.title}</h1>
-            <h1>{mdx.frontmatter.date}</h1>
-          </div>
-          <MDXProvider components={shortcodes}>
-            <div className="body">
-            <MDXRenderer>{mdx.body}</MDXRenderer>
+        <div className="article-body">
+          <Link to="/blog">Back</Link>
+          {/* <div className="post"> */}
+            <div className="post-header">
+              <h1 className="post-title">{mdx.frontmatter.title}</h1>
+              <p className="blog-meta-data">{mdx.frontmatter.date}</p>
             </div>
-          </MDXProvider>
-
+            <MDXProvider components={shortcodes}>
+              <div className="post-body">
+                <MDXRenderer>{mdx.body}</MDXRenderer>
+              </div>
+            </MDXProvider>
+          {/* </div> */}
         </div>
       </Layout>
-    </div>
   )
 }
 
