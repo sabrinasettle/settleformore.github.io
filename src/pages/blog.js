@@ -16,7 +16,7 @@ export default function BlogIndex ({data}) {
         Articles
       </h1>
       <h2 className="page-sub-header"> 
-        I write about fullstack web development sprinkled with my favorite popular (and not so popluar) culture referneces gifs and emojis 
+        I write about fullstack web development sprinkled with my favorite popular (even unpopular) cultural referneces
       </h2>
       <ul id="blog-posts">
         {data.allMdx.nodes.map(({ id, frontmatter }) => {

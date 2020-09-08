@@ -1,5 +1,5 @@
 ---
-title: Being pro during lockdown 
+title: Being productive during lockdown 
 slug: first
 path: '/blog/covid-feels'
 date: 2020-08-31
@@ -7,6 +7,7 @@ published: true
 featuredImage: ./src/images/i7.png
 tags: ["web development", "mental health", "work ethic"]
 ---
+![instagram](CEpP7rGDggF)
 
 The time of Covid-19 as been a strange time for all, and has created at least a few pages in history textbooks to come. But for those who are students or just starting their career, its a very interesting time.
 I have been so lucky to have remote work from a position held at my school during the lockdown and all the uncertainty. 
@@ -16,5 +17,3 @@ Well in my case it's to be forgiving, to congratulate myself on small milestones
 
 I hope what ever you have done during this time has been to help yourself and to help others. Be proud of any progress this time has produced. 
 
-
-![instagram](CEpP7rGDggF)
