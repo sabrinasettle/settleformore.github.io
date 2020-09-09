@@ -9,7 +9,7 @@ tags: ["web development", "mental health", "work ethic"]
 ---
 ![instagram](CEpP7rGDggF)
 
-The time of Covid-19 as been a strange time for all, and has created at least a few pages in history textbooks to come. But for those who are students or just starting their career, its a very interesting time.
+The time of Covid-19 has been a strange time for all, and has created at least a few pages in history textbooks to come. But for those who are students or just starting their career, its a very interesting time.
 I have been so lucky to have remote work from a position held at my school during the lockdown and all the uncertainty. 
 Its clear to me that I become lethargic and depressed when I don't have work to send energy into, but this time period is unusual and surreal, so what should work look like?
 
