@@ -9,6 +9,8 @@ const Contact = () => {
                 <a href="https://www.linkedin.com/in/sabrina-settle/">LinkedIn</a>
                 <p> or </p>
                 <a href="https://twitter.com/stdvbb">Twitter</a>
+                <p>Wanna see my resume?</p>
+                <a href="https://www.canva.com/design/DAEJNWR4Mqw/EMLWWWCsbErrNqG3hupICw/view?utm_content=DAEJNWR4Mqw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"></a>
             </div>
         </div>
     )

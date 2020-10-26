@@ -10,6 +10,9 @@ var plugins = [{
     },{
       plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-mdx/gatsby-ssr'),
       options: {"plugins":[],"extensions":[".mdx",".md"],"defaultLayout":"/Users/sabrina/Desktop/settleformore.github.io/src/components/blog/blog-post-layout.js"},
+    },{
+      plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
+      options: {"plugins":[],"fonts":["Cedarville","Reenie Beanie","Permanent Marker"],"display":"swap"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

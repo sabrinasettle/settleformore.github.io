@@ -1,5 +1,5 @@
 ---
-title: Being productive during lockdown 
+title: Being productive during Lockdown 
 slug: first
 path: '/blog/covid-feels'
 date: 2020-08-31

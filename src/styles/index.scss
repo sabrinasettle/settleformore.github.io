@@ -5,7 +5,8 @@ html, body {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #73af83;
+    // background-color: #73af83;
+    background-color: #d3ffcf;
     color: rgb(39, 39, 39);
 }
 
@@ -85,13 +86,12 @@ h2.page-sub-header {
 #grid-top-part {
     display: grid;
     grid-template-columns: repeat(5, 0.5fr);
-    // grid-auto-rows: 0.5fr;
     grid-template-rows: auto;
     position: relative;
     .image-stack__item--top {
         #des {
             text-align: center;
-            top: 15%; /* Adjust this value to move the positioned div up and down */
+            top: 15%; 
             color: rgb(39, 39, 39);
             h1, h2, h3, h4, h5, h6 {
                 font-family: 'Inconsolata', monospace;
@@ -99,12 +99,12 @@ h2.page-sub-header {
             }
         }
         grid-column: 1 / 6;
-        grid-row: 1; // must be on the same row as the other image
-        z-index: 1; // make this image render on top of the bottom
+        grid-row: 1; 
+        z-index: 1; 
     }
     .image-stack__item--bottom {
         grid-column: 3 / 6;
-        grid-row: 1 / span 2; // make this image be on the same row
+        grid-row: 1 / span 2;
     }
     #intro-sub-header {
         font-size: 3rem;
@@ -112,27 +112,20 @@ h2.page-sub-header {
         grid-column: 1 / 6;
         z-index: 1;
     }
-
 }
 
-
 @media (max-width: 40em) {
-    
     #grid-top-part {
         #intro-sub-header {
             font-size: calc(2.5rem + 1.25 * ((100vw - 30.0625rem) / 29.9375));
         }
     }
-
     #about-nav-container {
         padding-left: 5%;
     }
-
     ul#about-nav{
         a{
             padding-left: 9%;
         }
     }
-    
-    
 }

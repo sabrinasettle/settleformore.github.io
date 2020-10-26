@@ -24,5 +24,10 @@ host locally: gatsby develop
 
 ### To Do
 - [ ] Add image to index page
-- [x] Correct as to has in covid-feels.md
-
+- [ ] Change layout of about page
+- [ ] Add portfolio/work to index page
+- Add ability to access the most recent resume from Canva.com
+- [ ] Add Google analytics details to gatsby-config.js
+- [ ] if that works remove the google analytics from components/seo.js
+- [ ] Finish unpublished posts
+- [ ] Finish the SEO for posts as well

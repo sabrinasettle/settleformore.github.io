@@ -5,17 +5,14 @@
     width: 80%;
 }
 
-
-
 ul#about-nav{
     margin: 0;
     padding: 0;
     a {
         padding-left: 10%;
-        // padding-right: 5%;  
-        // color:red;
     }
 }
+
 #about {
     position: relative;
     width: 80%;
@@ -64,18 +61,15 @@ ul#about-nav{
     position: absolute;
     top: 70px;
     z-index: 999;
-    // padding-top: 40px;
 }
 
-// #image-about {
-    .paint-stroke {
-        opacity: 0.65;
-        max-width: 600px;
-        max-height: 500px;
-        min-width: 600px;
-        min-height: 500px;
-    }
-// }
+.paint-stroke {
+    opacity: 0.65;
+    max-width: 600px;
+    max-height: 500px;
+    min-width: 600px;
+    min-height: 500px;
+}
 
 
 #contact {
@@ -96,7 +90,8 @@ ul#about-nav{
 
 #about-grid {
     display: grid;
-    grid-gap: 1.875rem;
+    grid-row-gap: 1.875rem;
+    // grid-template-columns: repeat(5, 0.5fr); 
     grid-auto-rows: minmax(min-content, max-content);
     padding-bottom: 5%;
     h1 {
@@ -104,12 +99,15 @@ ul#about-nav{
         padding: 0;
     }
     #about{
+        // grid-column: 2 / 4;
         grid-row: 1 / 2;
     }
     #about-two{
+        // grid-column: 2 / 4;
         grid-row: 2 / 3;
     }
     #contact {
+        // grid-column: 2 / 4;
         grid-row: 4 / 5;
     }
     .image-stack {
@@ -120,13 +118,13 @@ ul#about-nav{
     }
     .image-stack__item--top {
         grid-column: 1 / span 6;
-        grid-row: 1; // must be on the same row as the other image
-        padding-top: 20%; // this pushes the image down, and keeps it proportional as it resizes
-        z-index: 1; // make this image render on top of the bottom
+        grid-row: 1; 
+        padding-top: 20px; 
+        z-index: 1; 
     }
     .image-stack__item--bottom {
         grid-column: 4 / 12;
-        grid-row: 1; // make this image be on the same row
+        grid-row: 1; 
     }
 }
 

@@ -15,11 +15,11 @@ export default function About() {
     
     return (
         <Layout>
-            <AboutNav />
+            {/* <AboutNav /> */}
             <div id="about-grid">
-                <AboutPartOne />
+                {/* <AboutPartOne /> */}
                 <AboutPartTwo />
-                <div className="image-stack">
+                {/* <div className="image-stack">
                     <div className="image-stack__item--bottom">
                         <Stain />
                     </div>
@@ -27,7 +27,7 @@ export default function About() {
                         <Drawing1 />
 
                     </div>
-                </div>
+                </div> */}
                 <Contact />
             </div>
             
