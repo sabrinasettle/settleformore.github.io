@@ -1,6 +1,5 @@
 nav.site-nav {
   font-weight: normal;
-  font-size: 1.25rem;
   line-height: 1.4;
   align-items: center;
   display: flex;
@@ -8,7 +7,6 @@ nav.site-nav {
   float: right;
   justify-content: flex-end;
   margin: 0;
-  // padding: 0 15%;
   li {
     margin-left: 30px;
   }
@@ -19,6 +17,7 @@ ul.site-nav-list {
   margin: 0;
   list-style-type: none;
   counter-reset: li;
+  font-family: 'Antic Slab', serif;
 }
 
 #nav a:hover {
@@ -27,4 +26,9 @@ ul.site-nav-list {
 
 #nav a.active {
   color: white;
+}
+
+#home {
+  font-family: 'EB Garamond', serif;
+  font-size: 50px;
 }

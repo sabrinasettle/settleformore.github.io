@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-// Components
-import { Link, graphql } from "gatsby"
+// import React from "react"
+// import PropTypes from "prop-types"
+// // Components
+// import { Link, graphql } from "gatsby"
 // const Tags = ({ pageContext, data }) => {
 //   const { tag } = pageContext
 //   const { edges, totalCount } = data.allMarkdownRemark
@@ -56,23 +56,20 @@ import { Link, graphql } from "gatsby"
 // export const pageQuery = graphql`
 //   query($tag: String) {
 //     allMarkdownRemark(
-//       limit: 2000
 //       sort: { fields: [frontmatter___date], order: DESC }
 //       filter: { frontmatter: { tags: { in: [$tag] } } }
 //     ) {
-//       totalCount
 //       edges {
 //         node {
-//           fields {
-//             slug
-//           }
 //           frontmatter {
 //             title
+//             path
 //           }
 //         }
 //       }
 //     }
 //   }
 // `
+
 
 //https://www.gatsbyjs.com/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files

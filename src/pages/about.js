@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout.js"
-import AboutPartOne from "../components/about/about-part-one.js"
+// import AboutPartOne from "../components/about/about-part-one.js"
 import AboutPartTwo from "../components/about/about-part-two.js"
 
 import Contact from "../components/about/contact.js"
-import AboutNav from "../components/about/aboutnav.js"
+// import AboutNav from "../components/about/aboutnav.js"
 
-import Stain from "../components/images/stain-image.js"
-import Drawing1 from "../components/images/drawing-image.js"
+// import Stain from "../components/images/stain-image.js"
+// import Drawing1 from "../components/images/drawing-image.js"
 // import PaintStroke from "../components/images/paint_stroke.js"
 import "../styles/about.scss"
 

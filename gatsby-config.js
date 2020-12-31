@@ -50,9 +50,10 @@ module.exports = {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
               fonts: [
-                'Cedarville',
-                'Reenie Beanie',
-                'Permanent Marker',
+                'M PLUS 1p',
+                'Overpass',
+                'EB Garamond',
+                'Antic Slab',
               ],
               display: 'swap'
             }

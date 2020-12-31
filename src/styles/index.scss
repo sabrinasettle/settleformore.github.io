@@ -6,12 +6,12 @@ html, body {
 body {
     font-family: 'Montserrat', sans-serif;
     // background-color: #73af83;
-    background-color: #d3ffcf;
+    background-color: #f6f8e8;
     color: rgb(39, 39, 39);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Reenie Beanie', cursive;
+    font-family: 'M PLUS 1p', sans-serif;
     letter-spacing: .0555555556em;
 }
 
@@ -23,14 +23,14 @@ footer {
 a {
     color: rgb(39, 39, 39);
     text-decoration: none;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 40px;
+    // font-family: 'Reenie Beanie', cursive;
+    font-size: 30px;
     letter-spacing: .0555555556em;
     line-height: 1.4;
 }
 
 a:hover {
-    color: white;
+    color: rgb(10, 83, 26);
 }
 
 .full-page {
@@ -40,12 +40,13 @@ a:hover {
 }
 
 h1.page-header {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-family: 'Antic Slab', serif;
 }
 
 h2.page-sub-header {
     font-size: 2rem;        
-    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto', sans-serif;
 }
 
 .content {
@@ -94,8 +95,8 @@ h2.page-sub-header {
             top: 15%; 
             color: rgb(39, 39, 39);
             h1, h2, h3, h4, h5, h6 {
-                font-family: 'Inconsolata', monospace;
-                font-size: 40px;
+                font-family: 'Antic Slab', serif;
+                // font-size: px;
             }
         }
         grid-column: 1 / 6;
@@ -107,7 +108,7 @@ h2.page-sub-header {
         grid-row: 1 / span 2;
     }
     #intro-sub-header {
-        font-size: 3rem;
+        font-size: 2rem;
         grid-row: 2;
         grid-column: 1 / 6;
         z-index: 1;

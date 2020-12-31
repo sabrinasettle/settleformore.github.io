@@ -12,7 +12,10 @@ var plugins = [{
       options: {"plugins":[],"extensions":[".mdx",".md"],"defaultLayout":"/Users/sabrina/Desktop/settleformore.github.io/src/components/blog/blog-post-layout.js"},
     },{
       plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
-      options: {"plugins":[],"fonts":["Cedarville","Reenie Beanie","Permanent Marker"],"display":"swap"},
+      options: {"plugins":[],"fonts":["M PLUS 1p","Overpass","EB Garamond","Antic Slab"],"display":"swap"},
+    },{
+      plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"UA-180101824-1","head":false,"anonymize":true,"respectDNT":true,"exclude":["/preview/**","/do-not-track/me/too/"],"pageTransitionDelay":0,"optimizeId":"YOUR_GOOGLE_OPTIMIZE_TRACKING_ID","experimentId":"YOUR_GOOGLE_EXPERIMENT_ID","variationId":"YOUR_GOOGLE_OPTIMIZE_VARIATION_ID","defer":false,"sampleRate":5,"siteSpeedSampleRate":10,"cookieDomain":"settleformore.github.io"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

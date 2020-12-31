@@ -1,5 +1,5 @@
 import React from 'react';
-import Circle from "../images/circle-image.js"
+// import Circle from "../images/circle-image.js"
 // import Stain from "../images/stain-image.js"
 // import Drawing1 from "../images/drawing-image.js"
 // import PaintStroke from "../images/paint_stroke.js"
