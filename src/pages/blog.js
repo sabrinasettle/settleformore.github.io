@@ -21,9 +21,9 @@ export default function BlogIndex ({data}) {
           // var other = tags;
           console.log("tags", tags);
           return (
+            
             <li className="article-list" key={id}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
-              <p>{tags}</p>
             </li>
           )
         })}
@@ -46,6 +46,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
+            tags
           }
       }
     }
