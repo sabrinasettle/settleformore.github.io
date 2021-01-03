@@ -42,6 +42,7 @@ function BlogPostTemplate(props) {
   )
 }
 export default BlogPostTemplate
+
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {

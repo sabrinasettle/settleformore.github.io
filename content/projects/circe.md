@@ -1,8 +1,9 @@
 ---
 description: work
-title: Circe
+title: Circe (42 Silicon Valley)
+subtitle: Work
 link: settleformore.github.io
-development: [HTML, Javascript, CSS, Bootstrap, PostgresSQL, Ruby on Rails]
+development: [HTML, Javascript, CSS, SASS, PostgresSQL, Ruby on Rails]
 type: work
 
 ---
