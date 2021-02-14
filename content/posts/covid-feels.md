@@ -2,7 +2,7 @@
 title: Being productive during Lockdown 
 slug: first
 path: '/blog/covid-feels'
-date: 2020-08-31
+date: "2020-08-31"
 published: true
 featuredImage: ./src/images/i7.png
 tags: ["web development", "mental health", "work ethic"]

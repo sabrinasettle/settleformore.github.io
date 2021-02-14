@@ -1,5 +1,7 @@
 import React from "react"
 import Layout from "../components/layout.js"
+import Photos from "../components/about/photos.js"
+import Image from "../components/about/Image.js"
 // import AboutPartOne from "../components/about/about-part-one.js"
 import AboutPartTwo from "../components/about/about-part-two.js"
 
@@ -17,17 +19,19 @@ export default function About() {
         <Layout>
             {/* <AboutNav /> */}
             <div id="about-grid">
+                
                 {/* <AboutPartOne /> */}
-                <AboutPartTwo />
-                {/* <div className="image-stack">
+                <div className="image-stack">
                     <div className="image-stack__item--bottom">
-                        <Stain />
+                        <Image fileName="NancyPortrait2018.jpg" style={{ width: '100%' }} alt="" />
                     </div>
                     <div className="image-stack__item--top">
-                        <Drawing1 />
+                        {/* <AboutPartTwo /> */}
+                        {/* <div className="circle"></div> */}
+                        <Image fileName="NancyPortrait2018.jpg" style={{ width: '100%' }} alt="" />
 
                     </div>
-                </div> */}
+                </div>
                 <Contact />
             </div>
             

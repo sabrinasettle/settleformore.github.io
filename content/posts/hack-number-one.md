@@ -2,7 +2,7 @@
 title: Hack Number One - Chartkick
 slug: 
 path: '/blog/hack-number-one'
-date: 2020-11-06
+date: "2020-11-06"
 published: true
 featuredImage: 
 tags: ["hacks", "web development"]

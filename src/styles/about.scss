@@ -139,3 +139,15 @@ ul#about-nav{
     padding-bottom: 20px;
 }
 
+.circle {
+    border-radius: 60%;
+  /*   background: #e66465; */
+    background: #0a531a;
+  /*   background: radial-gradient(#e66465, #fff); */
+  /*   box-shadow: 0px 0px 70px 90px #e66465; */
+    box-shadow: 0px 0px 85px 110px #0a531a;
+    height: 120px;
+    width: 120px;
+    z-index: 1;
+  }
+  
