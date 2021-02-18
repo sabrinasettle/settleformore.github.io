@@ -23,6 +23,17 @@ li.article-list{
     margin-top: 30px;
 }
 
+ul#tag-list {
+    list-style-type: none;
+    // display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+li.tag {
+    display: inline-block;
+}
+
 .back-link {
     font-size: 2rem;
     padding-bottom: 20px;
