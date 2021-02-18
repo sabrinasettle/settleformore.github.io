@@ -1,7 +1,7 @@
 ---
 title: Phoenix Project Book Review
 slug: first
-path: '/blog/book-review-phoeeix-project'
+path: '/blog/book-review-phoenix-project'
 date: 2021-01-29
 published: true
 featuredImage: ./src/images/i7.png
