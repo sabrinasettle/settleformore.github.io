@@ -15,8 +15,8 @@ export default function BlogIndex ({data}) {
       <h2 className="page-sub-header"> 
         I write about fullstack web development sprinkled with my favorite popular (even unpopular) cultural referneces
       </h2>
-      <ul id="blog_tags">
-        {data.allMdx.nodes.map(({ frontmatter, tags }) => {
+      {/* <ul id="blog_tags">
+        {data.allMdx.nodes.map(({ frontmatter }) => {
           var tags1 = frontmatter.tags;
           console.log("tags1", tags1)
           
@@ -27,7 +27,7 @@ export default function BlogIndex ({data}) {
             })}
           
         })}
-      </ul>
+      </ul> */}
       <ul id="blog-posts">
         {data.allMdx.nodes.map(({ id, frontmatter, tags}) => {
           return (
