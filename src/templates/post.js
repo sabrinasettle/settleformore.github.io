@@ -24,7 +24,7 @@ function BlogPostTemplate(props) {
               <div className="tags-section">
                 <h2>Tags</h2>
                 {post.frontmatter.tags.map((tag) => {
-                  console.log("tag", tag)
+                  // console.log("tag", tag)
                   return(
                     <p>{tag}</p>
                     )

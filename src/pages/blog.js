@@ -19,7 +19,7 @@ export default function BlogIndex ({data}) {
         {data.allMdx.nodes.map(({ id, frontmatter, tags }) => {
           // var tags = frontmatter.tags;
           // var other = tags;
-          console.log("tags", tags);
+          // console.log("tags", tags);
           return (
             
             <li className="article-list" key={id}>
