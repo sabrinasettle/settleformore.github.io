@@ -17,7 +17,7 @@ I wanna start by defining something important.
 ### Algorithm
 /ˈalɡərɪð(ə)m/
 *noun*
-a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
+> a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
 
 This means that a coding problem that asks you to find how many pages are in a chapter has an algorithm. Or a method to update users in a database has an algorithm.
 

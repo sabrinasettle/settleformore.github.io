@@ -134,19 +134,19 @@ export default function Post({ data: { mdx } }) {
   )
 }
 
-export const pageQuery = graphql`
-  query($pathSlug: String!) {
-    mdx(frontmatter: { path: { eq: $pathSlug } }) {
-      id
-      body
-      frontmatter {
-        title
-        path
-        date(formatString: "MMMM Do, YYYY")
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query($pathSlug: String!) {
+//     mdx(frontmatter: { path: { eq: $pathSlug } }) {
+//       id
+//       body
+//       frontmatter {
+//         title
+//         path
+//         date(formatString: "MMMM Do, YYYY")
+//       }
+//     }
+//   }
+// `
 
 // export const query = graphql`
 //   query($pathSlug: String!) {

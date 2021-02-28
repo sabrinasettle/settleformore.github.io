@@ -20,20 +20,16 @@ function BlogPostTemplate(props) {
         <div className="article-body">
             <Link className="back-link" to="/blog">Go Back</Link>
             <div className="post-header">
-              <h1 className="post-title">{post.frontmatter.title}</h1>
-              <div className="tags-section">
-                <h2>Tags</h2>
-                {post.frontmatter.tags.map((tag) => {
-                  // console.log("tag", tag)
-                  return(
-                    <p>{tag}</p>
-                    )
-                  })}
-              </div>                
+              <h1 className="post-title">{post.frontmatter.title}</h1>            
             </div>
             <div className="post-sub-header">
-                <p className="blog-meta-data">{post.frontmatter.date}</p>
+                <p className="blog-meta-data">{post.frontmatter.date}</p>   
             </div>
+            <ul className="tag-list">
+              {post.frontmatter.tags.sort().map(tag => {
+                return <li className="tag" key={tag}>{tag}</li>
+              })}
+            </ul> 
             <div className="post-body">
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>

@@ -29,8 +29,19 @@ module.exports = {
                 name: `projects`,
             },
         },
-        'gatsby-plugin-sass',
-        'gatsby-plugin-offline',
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/src/templates/`,
+                name: `templates`,
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-sass',
+            options: {
+                implementation: require('sass')
+            },
+        },
         'gatsby-image',
         'gatsby-background-image',
         'gatsby-transformer-sharp', 
