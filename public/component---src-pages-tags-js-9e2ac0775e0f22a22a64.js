@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{enK5:function(e,n,a){"use strict";a.r(n),a.d(n,"default",(function(){return u}));var t=a("q1tI"),l=a.n(t),r=a("Bl7J");function u(e){e.data;return l.a.createElement(r.a,null,l.a.createElement("h1",{className:"page-header"},"Tags"),l.a.createElement("ul",null))}}}]);
+//# sourceMappingURL=component---src-pages-tags-js-9e2ac0775e0f22a22a64.js.map

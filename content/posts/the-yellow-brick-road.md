@@ -31,31 +31,80 @@ In [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) APIs
 By design API calls are an abstraction, allowing through objects or actions because of [information hiding](linkhttps://en.wikipedia.org/wiki/Information_hiding). Information hiding is an important part of object-oriented programming (called *encapsulation*) and dividing software into modules of functionality. This can protect data and the way its stored and if it can be stored, giving the interface for the user a clear structure.
 
 Ok, so lets break this down:
-1. Endpoint -
-2. Method -
+
+1. Endpoint - This is the location to which the request is sent
+
+2. Request Methods -
     Most likely to see:
-        GET -
-        POST -
-        PATCH -
-        PUT -
-        DELETE -
-3. Headers -
+        GET - One of the most popular requests. Retrieves information about a resource.
+        POST - Create or update a resource.
+        PUT - Also creates or updates a resource. But this one is idempotent, meaning that the request can be called multiple times without creating a new resource each time.
+        PATCH - Applies partial modifications to a resource.
+        DELETE - Deletes a resource.
 
-4. Data or Body -
+3. Headers - Represents the meta-data. Most headers will need values or assertions set to make sure the correction data and headers are returned.
+
+4. Data or Body - This object is sent on success or on failure.
 
 
-Lets use an example:
+Lets use an example in a curl command:
+
+```
+    curl
+```
 
 
 
 So when my friend asked "What does it return?", here's the anwser:
 
 A response, which can include these parts:
+- A status.
 - An object (JSON or XTML), the returned Data if any.
 - A message.
-- A status.
+
+It could look like this with the object in JSON,
+
+```
+{
+  "status": "success", // In true REST fashion this will not be a code, but could be depending on the design. It may not even have this status on success just the object
+  "data": {
+    "name": "Sabrina Settle",
+    "likes_cheese": true,
+  },
+}
+```
+
+And a error response could look like:
+```
+{
+    "status": "error",
+    "code": 404, // This is a HTTP Code described more below
+    "message" : "User does not exist"
+}
+```
+
+In each of these examples I have identified that the status could be a HTTP code.
+
+Success codes tend to be in the format 2xx. And they are:
+200 OK — The request was fulfilled.
+
+201 Created —
+
+202 Accepted — 
+
+203 Partial Information —
 
 
+
+Error codes tend to be in the format of 4xx or 5xx. And they are:
+
+400 Bad Request — Client sent an invalid request — such as lacking required request body or parameter
+401 Unauthorized — Client failed to authenticate with the server
+403 Forbidden — Client authenticated but does not have permission to access the requested resource
+404 Not Found — The requested resource does not exist
+412 Precondition Failed — One or more conditions in the request header fields evaluated to false
+500 Internal Server Error — A generic error occurred on the server
+503 Service Unavailable — The requested service is not available
 
 
 
@@ -63,3 +112,8 @@ A response, which can include these parts:
 
 [^1] https://en.wikipedia.org/wiki/API
 [^2] https://rapidapi.com/blog/types-of-apis/
+
+## References
+[HTTP codes](https://www.w3.org/Protocols/HTTP/HTRESP.html)
+[Community Discussion on JSON response formats](https://stackoverflow.com/questions/12806386/is-there-any-standard-for-json-api-response-format)
+[JSON Documentation on building APIs](https://jsonapi.org/)
