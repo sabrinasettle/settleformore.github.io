@@ -1,19 +1,16 @@
 ---
-title: The Yellow Brick Road - An Intro to Web APIs
+title: An Intro to Web APIs
 slug: 
-path: '/blog/the-yelow-brick-road-intro-to-apis'
+path: '/blog/intro-to-web-apis'
 date: 2020-11-23
-published: false
+published: true 
 featuredImage: 
 tags: ["starting out", "web development"]
 ---
 
-
 Recently I had a friend reach out to talk to me about APIs. It was unsurprising since they had spoken to me at the beginning of 2020 about changing into the tech sector by learning code at home. They asked great questions about languages and, unusually, they were interested in my enthusiastic explanations. You find that being into code and computers puts many into an uneasy disoriented haze while you talk about those subjects. But getting back to it, this friend was confused by Web APIs. What did they return? How did you use one? Which in turn, led to how do you design architecture for an app? 
 
-In this article I will discuss the first two questions and at a later time will create an article on archituel design in my limited experience as a junior programmer and while languages, frameworks, and architecture are a key part of development I wanted to write an intro to Web APIs because I remember being equally confused about them. 
-
-I titled this article referencing the road (or APIs) that Dorothy follows through OZ to get to the Emerald City (the returning data).
+In this article I will discuss the first two questions and at a later time will create an article on architectural design in my limited experience as a junior programmer and while languages, frameworks, and architecture are a key part of development I wanted to write an intro to Web APIs because I remember being equally confused about them. 
 
 First and foremost, API stands for Application Programming Interface. Let's break this down a bit:
 
@@ -32,7 +29,7 @@ By design API calls are an abstraction, allowing through objects or actions beca
 
 Ok, so lets break this down:
 
-1. Endpoint - This is the location to which the request is sent
+1. Endpoint - This is the location to which the request is sent. Can look like, 'https://v2.org/', or have a place for a parameter like 'https://v2.org/{id}/'.
 
 2. Request Methods -
     Most likely to see:
@@ -46,16 +43,69 @@ Ok, so lets break this down:
 
 4. Data or Body - This object is sent on success or on failure.
 
+## In Practice
 
-Lets use an example in a curl command:
+Knowing that there are endpoints and requests. Lets use an example in a [curl](https://linuxize.com/post/curl-command-examples/) command:
+```
+    curl -v https://www.affirmations.dev/
+```
+The output being,
+```
+    * Trying 3.216.182.123...
+    * TCP_NODELAY set
+    * Connected to www.affirmations.dev (3.216.182.123) port 443 (#0)
+    * ALPN, offering h2
+    * ALPN, offering http/1.1
+    * successfully set certificate verify locations:
+    * CAfile: /etc/ssl/cert.pem
+    CApath: none
+    * TLSv1.2 (OUT), TLS handshake, Client hello (1):
+    * TLSv1.2 (IN), TLS handshake, Server hello (2):
+    * TLSv1.2 (IN), TLS handshake, Certificate (11):
+    * TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+    * TLSv1.2 (IN), TLS handshake, Server finished (14):
+    * TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+    * TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+    * TLSv1.2 (OUT), TLS handshake, Finished (20):
+    * TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+    * TLSv1.2 (IN), TLS handshake, Finished (20):
+    * SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+    * ALPN, server accepted to use http/1.1
+    * Server certificate:
+    *  subject: CN=www.affirmations.dev
+    *  start date: Feb 20 23:43:43 2021 GMT
+    *  expire date: May 21 23:43:43 2021 GMT
+    *  subjectAltName: host "www.affirmations.dev" matched cert's "www.affirmations.dev"
+    *  issuer: C=US; O=Let's Encrypt; CN=R3
+    *  SSL certificate verify ok.
+    > GET / HTTP/1.1
+    > Host: www.affirmations.dev
+    > User-Agent: curl/7.64.1
+    > Accept: */*
+    >
+    < HTTP/1.1 200 OK
+    < Server: Cowboy
+    < Connection: keep-alive
+    < X-Powered-By: Express
+    < Content-Type: application/json; charset=utf-8
+    < Content-Length: 47
+    < Etag: W/"2f-cA6SQFph4kS607FbNVTCEJPgoRw"
+    < Date: Fri, 05 Mar 2021 21:57:55 GMT
+    < Via: 1.1 vegur
+    <
+    * Connection #0 to host www.affirmations.dev left intact
+    {"affirmation":"You're resourceful and clever"}* Closing connection 0
+```
+
+This curl of the [Affirmations API](https://github.com/annthurium/affirmations) produces an object:
 
 ```
-    curl
+    {"affirmation":"You're resourceful and clever"}
 ```
 
+Which is exactly what we want! The curl command is just a taste of what happens. Because of being a command you can script it in and work with data that way if you want. That curl request doesn't include a parameter like a resource id or name so its just a simple GET request.
 
-
-So when my friend asked "What does it return?", here's the anwser:
+When my friend asked "What does it return?", here's the answer:
 
 A response, which can include these parts:
 - A status.
@@ -65,35 +115,31 @@ A response, which can include these parts:
 It could look like this with the object in JSON,
 
 ```
-{
-  "status": "success", // In true REST fashion this will not be a code, but could be depending on the design. It may not even have this status on success just the object
-  "data": {
-    "name": "Sabrina Settle",
-    "likes_cheese": true,
-  },
-}
+    {
+        "status": "success", // In true REST fashion this will not be a code, but could be depending on the design. It may not even have this status on success just the object
+        "data": {
+            "name": "Sabrina Settle",
+            "likes_cheese": true,
+        },
+    }
 ```
-
-And a error response could look like:
+Or in the curl example the  object. And a error response could look like:
 ```
-{
-    "status": "error",
-    "code": 404, // This is a HTTP Code described more below
-    "message" : "User does not exist"
-}
+    {
+        "status": "error",
+        "code": 404, // This is a HTTP Code described more below
+        "message" : "User does not exist"
+    }
 ```
 
 In each of these examples I have identified that the status could be a HTTP code.
 
 Success codes tend to be in the format 2xx. And they are:
+
 200 OK — The request was fulfilled.
-
-201 Created —
-
-202 Accepted — 
-
-203 Partial Information —
-
+201 Created — Successfully created a new resource.
+202 Accepted — The request has been accepted for processing, but the processing has not been completed.
+203 Partial Information — indicates that the request was successful but the enclosed payload has been modified by a transforming proxy from the original server.
 
 
 Error codes tend to be in the format of 4xx or 5xx. And they are:
@@ -106,7 +152,11 @@ Error codes tend to be in the format of 4xx or 5xx. And they are:
 500 Internal Server Error — A generic error occurred on the server
 503 Service Unavailable — The requested service is not available
 
+As you foray into APIs these codes will tell you a lot about the successes and failures of the requests you make. 
 
+### Conclusion
+
+To sum up RESTful APIs, they are a programming interface where you make requests to endpoints via HTTP methods which return messages and objects from original server. They so fun and have inspired some amazing projects.
 
 ## Footnotes
 
