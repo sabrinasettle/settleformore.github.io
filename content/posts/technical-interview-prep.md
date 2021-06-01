@@ -57,7 +57,6 @@ def binarySearch(arr, target)
         if arr[mid] == target
             return "index of #{target} is #{mid}"
         elsif target > arr[mid]
-        # makes the right_most position one less than the mid 
             left_most = mid + 1
         elsif target < arr[mid]
             right_most = mid - 1
@@ -68,13 +67,13 @@ def binarySearch(arr, target)
 end
 ```
 Breakdown:
-
+The premise of this search is to divide and conquer, this happens by setting a mid point to the array. Since its sorted we can gauge which side we need to be on by the mid point. Target is more than the value at mid? the left most is now mid + 1. Target is less than the value at mid? the right most is now mid - 1. 
 
 ### O notation
 
-- Best
-- Worst
-- Average?
+- Best: O(1)
+- Worst: O(log n)
+- Average: O(log n)
 
 ## Quick Sort
 ```
@@ -252,7 +251,6 @@ This method decreases the array on the recrusive call, based off the comparsion 
 
 - Best - O(n log n)
 - Worst - O(n log n)
-
 
 
 ## Resources

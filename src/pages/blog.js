@@ -13,21 +13,8 @@ export default function BlogIndex ({data}) {
         Blog
       </h1>
       <h2 className="page-sub-header"> 
-        I write about fullstack web development sprinkled with my favorite popular (even unpopular) cultural referneces
+        I write about fullstack web development sprinkled with my favorite popular (even unpopular) cultural references
       </h2>
-      {/* <ul id="blog_tags">
-        {data.allMdx.nodes.map(({ frontmatter }) => {
-          var tags1 = frontmatter.tags;
-          console.log("tags1", tags1)
-          
-            {frontmatter.tags.sort().map(tag => {
-              console.log("tag", tag)
-              let key = Math.random(); 
-              return <li className="tag" key={key}>{tag}</li>
-            })}
-          
-        })}
-      </ul> */}
       <ul id="blog-posts">
         {data.allMdx.nodes.map(({ id, frontmatter, tags}) => {
           return (

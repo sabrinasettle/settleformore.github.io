@@ -1,4 +1,6 @@
+import { Link } from 'gatsby';
 import React from 'react';
+import MainNav from './home_nav'
 
 const Main = () => {
     return (
@@ -11,7 +13,7 @@ const Main = () => {
               </div>
                 <h3 id="intro-sub-header"> and I am a Fullstack Engineer with an unconventional background. As a result, I enjoy being part of a variety of areas like UI design, creating graphics, animation, along with the more structured and logical database design, algorithm creation, and unraveling data from RESTful APIs.</h3>
             </div>
-
+            <MainNav />
         </div>
     )
 };

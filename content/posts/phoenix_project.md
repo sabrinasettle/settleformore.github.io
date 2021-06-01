@@ -5,7 +5,7 @@ path: '/blog/phoenix-project-book-review'
 date: 2021-01-29
 published: true
 featuredImage: ./src/images/i7.png
-tags: ["web development", "agile", "book review"]
+tags: ["agile", "book review"]
 ---
 
 ## The Phoenix Project

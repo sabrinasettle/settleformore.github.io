@@ -8,24 +8,25 @@ featuredImage:
 tags: ["starting out", "web development"]
 ---
 
-Recently I had a friend reach out to talk to me about APIs. It was unsurprising since they had spoken to me at the beginning of 2020 about changing into the tech sector by learning code at home. They asked great questions about languages and, unusually, they were interested in my enthusiastic explanations. You find that being into code and computers puts many into an uneasy disoriented haze while you talk about those subjects. But getting back to it, this friend was confused by Web APIs. What did they return? How did you use one? Which in turn, led to how do you design architecture for an app? 
+Intro to APIs 
+Recently I had a friend reach out to talk to me about APIs. It was unsurprising since they had spoken to me at the beginning of 2020 about changing into the tech sector by learning code at home. They asked great questions about languages and, unusually, they were interested in my enthusiastic explanations. You find that being into code and computers puts many into an uneasy disoriented haze while you talk about those subjects. But this friend was confused by Web APIs. What did they return? How did you use one? 
 
-In this article I will discuss the first two questions and at a later time will create an article on architectural design in my limited experience as a junior programmer and while languages, frameworks, and architecture are a key part of development I wanted to write an intro to Web APIs because I remember being equally confused about them. 
+In this article, I will discuss the answers to those two questions.
 
 First and foremost, API stands for Application Programming Interface. Let's break this down a bit:
 
-Application - This is the structure, Application (or app for short) is synonymous with a program or group of programs designed for end-users.
+Application - This is the structure, Application (or app for short) is synonymous with a program or group of programs designed for end-users.
 
-Programming - Kinda obvious but, it really means we are dealing with a program and program actions (see methods and requests below)
+Programming - Kinda obvious but, it really means we are dealing with a program and program actions (see methods and requests below)
 
-Interface - While User Interface comes to mind it's actually more about simple interaction with the programming action.
+Interface - While User Interface comes to mind it's actually more about simple interaction with the programming action.
  
 Wikipedia describes it very well, "It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc. It can also provide extension mechanisms so that users can extend existing functionality in various ways and to varying degrees."[^1]
 
 Lets get into understanding the term *requests*: Requests are the call to the API, usually only one at a time much like calling a person's name. There are [four popular structures](https://rapidapi.com/blog/types-of-apis/) for APIs, I will be talking about REST.
 In [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) APIs we can see this separation take place in the types of calls, though this also has something to do with Hypertext Transfer Protocol ([HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)) as well, though REST is not a protocol itself, but more "it is a set of architectural principles"[^2]. Guidelines for RESTful requests are documented in technical documentation. For Open APIs often the documentation provides the url to call and any required or extra parameters including headers for authenication. Now I have just used two terms a *call* and a *request*, why? Are the same? Pretty much! We make a *call* to the server OR we make a *request* to the server.
 
-By design API calls are an abstraction, allowing through objects or actions because of [information hiding](linkhttps://en.wikipedia.org/wiki/Information_hiding). Information hiding is an important part of object-oriented programming (called *encapsulation*) and dividing software into modules of functionality. This can protect data and the way its stored and if it can be stored, giving the interface for the user a clear structure.
+By design, API calls are an abstraction, objects and actions are allowed or disallowed because of [information hiding](linkhttps://en.wikipedia.org/wiki/Information_hiding). Information hiding is an important part of object-oriented programming (called *encapsulation*) and dividing software into modules of functionality. This can protect data and the way its stored and if it can be stored, giving the interface for the user a clear structure.
 
 Ok, so lets break this down:
 
@@ -45,10 +46,12 @@ Ok, so lets break this down:
 
 ## In Practice
 
-Knowing that there are endpoints and requests. Lets use an example in a [curl](https://linuxize.com/post/curl-command-examples/) command:
+Knowing that there are endpoints and requests. Lets use an example in a [curl](https://linuxize.com/post/curl-command-examples/) command (That way we bypass a project or framework and avoid programming language complications):
+
 ```
     curl -v https://www.affirmations.dev/
 ```
+
 The output being,
 ```
     * Trying 3.216.182.123...
@@ -156,7 +159,7 @@ As you foray into APIs these codes will tell you a lot about the successes and f
 
 ### Conclusion
 
-To sum up RESTful APIs, they are a programming interface where you make requests to endpoints via HTTP methods which return messages and objects from original server. They so fun and have inspired some amazing projects.
+To sum up, RESTful APIs are a programming interface where you make requests to endpoints via HTTP methods that return messages and objects from the original server. They so fun and have inspired some amazing projects.
 
 ## Footnotes
 

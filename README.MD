@@ -20,14 +20,30 @@ It deploys to settleformore.github.io.
 All images and icons are mine, unless credited
 
 ## Running this
-host locally: gatsby develop
+host locally @ localhost:8000 by running 
+```gatsby develop```
+OR 
+``` npm run dev```
 
 ### To Do
-- [ ] Add image to index page
 - [ ] Change layout of about page
-- [ ] Add portfolio/work to index page
-- Add ability to access the most recent resume from Canva.com
+- [x] Add portfolio/work to index page
+- [ ] Add ability to access the most recent resume from Canva.com
 - [ ] Add Google analytics details to gatsby-config.js
 - [ ] if that works remove the google analytics from components/seo.js
-- [ ] Finish unpublished posts
-- [ ] Finish the SEO for posts as well
+- [ ] Finish the dynamic SEO for posts
+- [ ] Add links to work if possible
+- [ ] Change font size on About page
+- [ ] Fix up the image overlay to be more centered than before
+- [ ] Animate line on hover of header nav links 
+
+
+#### Posts
+- [ ] fix circular refernce at end of Surronded by Idiots book review
+- [ ] 
+
+#### About Me
+- [ ] Add images of art work (weavings, binary knitting)
+- [ ] Unconventional background needs more linking in??? Maybe?
+- [ ] Web icon change
+- [ ] 
