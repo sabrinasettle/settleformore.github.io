@@ -28,14 +28,14 @@ OR
 ### To Do
 - [ ] Change layout of about page
 - [x] Add portfolio/work to index page
-- [ ] Add ability to access the most recent resume from Canva.com
+- [x] Add ability to access the most recent resume from Canva.com
 - [ ] Add Google analytics details to gatsby-config.js
 - [ ] if that works remove the google analytics from components/seo.js
 - [ ] Finish the dynamic SEO for posts
-- [ ] Add links to work if possible
+- [x] Add links to work if possible
 - [ ] Change font size on About page
 - [ ] Fix up the image overlay to be more centered than before
-- [ ] Animate line on hover of header nav links 
+- [x] Animate line on hover of header nav links 
 
 
 #### Posts

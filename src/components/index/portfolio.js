@@ -11,6 +11,7 @@ const List = ({data}) => {
           {array.map(({ node }) => {
             const frontmatter = node.frontmatter
             const development = node.frontmatter.development
+            const projectLink = node.frontmatter.link
             return (
               <div className="portfolio-item" key={node.id}>
                 <h2 className="project-title">{frontmatter.title}</h2>
@@ -25,6 +26,9 @@ const List = ({data}) => {
                     )
                   })}
                 </ul>
+                <div id="project-link">
+                  {projectLink === "n/a" ? <p>Link unavailable</p> : <a href={projectLink}> View here </a>}
+                </div>
               </div>
             )
           })}
