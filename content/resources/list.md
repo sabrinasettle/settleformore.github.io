@@ -19,6 +19,13 @@
 
 ### CSS (SASS and SCSS also)
 [CSS Tricks](https://chiplempke.medium.com/four-simple-css-tips-da3e5a715512)
+https://css-irl.info/animating-underlines/
+
+https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
+
+https://css-tricks.com/dont-overthink-flexbox-grids/
+
+https://freshman.tech/css-grid-calculator/
 
 ### React
 [React as a UI Runtime; Not Beginner Friendly](https://overreacted.io/react-as-a-ui-runtime/)
