@@ -36,6 +36,7 @@ OR
 - [ ] Change font size on About page
 - [ ] Fix up the image overlay to be more centered than before
 - [x] Animate line on hover of header nav links 
+- [ ] Finish resources page
 
 
 #### Posts
