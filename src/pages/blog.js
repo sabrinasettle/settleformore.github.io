@@ -6,10 +6,17 @@ import TagSection from '../components/blog/tags/tag-section'
 
 import "../styles/blog.scss"
 import "../styles/index.scss"
+import { useState } from "react";
 
 export default function BlogIndex ({data}) {
   const nodes = data.allMdx.nodes
-  // console.log(nodes)
+  
+  console.log(nodes)
+
+  const [state, setState] = useState({
+    filteredPosts: [],
+    query: "",
+  })
 
   const getAllTags = (nodes) => {
     let tagList = [];
@@ -29,6 +36,14 @@ export default function BlogIndex ({data}) {
 
   const tags = getAllTags(nodes);
   // console.log("tags", tags)
+
+  // create function in parent to handle state
+  const filterPosts = () => {
+    if (typeof window !== "undefined") {
+      // get data from url
+    }
+  }
+
   return (
     <Layout>
       <h1 className="page-header">
@@ -75,3 +90,30 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// query MyQuery {
+//   allMdx {
+//     group(field: frontmatter___tags) {
+//       tag: fieldValue
+//       totalCount
+//     }
+//   }
+// }
+
+
+/// query from 
+// export const PageQuery = graphql`
+//     query {
+//         site {
+//             siteMetadata {
+//                 title
+//             }
+//         }
+//         allMarkdownRemark(limit: 2000) {
+//             group(field: frontmatter___tags) {
+//                 fieldValue
+//                 totalCount
+//             }
+//         }
+//     }
+// `
