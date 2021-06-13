@@ -5,22 +5,58 @@ import TagButton from './tag-button'
 const TagGrid = (props) => {
     // console.log("props", props.tags)
     const tags = props.tags;
-
-    // create array of buttons with props
-    let buttonArray = [];
-    tags.forEach(tag => {
-        // console.log(tag)
-        buttonArray.push(<TagButton tag={tag} />)
+    const [state, setState] = React.useState({
+        chosenTags: [],
     })
 
+    // create array of buttons with props
+    const createButtonArray = () => {
+        let buttonArray = [];
+
+        tags.forEach(tag => {
+            if (state.chosenTags.includes(tag)) {
+                buttonArray.push(<TagButton id={tag} tag={tag} chosen={true} active={true}/>)
+            } else {
+                buttonArray.push(<TagButton id={tag} tag={tag} chosen={false} active={false}/>)
+            }
+        })
+
+        if (state.chosenTags.length !== 0 ){
+            buttonArray.push(<TagButton id="clear" tag="clear" />)
+        }
+
+        return buttonArray;
+    }
+
+
+    const addToState = (e) => {
+        console.log(e.target.textContent)
+        const text = e.target.textContent;
+        const tags = state.chosenTags;
+        if (text !== "clear") {
+            if (tags.includes(text)) {
+                let i = tags.indexOf(text)
+                console.log(i)
+                tags.splice(i, 1);
+                console.log(tags)
+                setState({...state, chosenTags: tags})
+            } else {
+                tags.push(text)
+                setState({...state, chosenTags: tags})
+            }
+        }
+        else {
+            setState({...state, chosenTags: []})
+        }
+    }
+
+    const buttonArray = createButtonArray();
     return(
         <div id="tag-button-grid">
             {buttonArray.map((button, index) => (
-                // <div className="grid-col">
-                    <span key={index}>
-                        {button}
-                    </span>
-                // </div>
+                <span key={index} onClick={addToState}>
+                    {button}
+                </span>
             ))}
         </div>
     )

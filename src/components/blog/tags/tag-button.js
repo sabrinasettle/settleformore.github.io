@@ -1,10 +1,10 @@
-import { Link } from 'gatsby';
 import React from 'react'
+import { Link } from 'gatsby';
 
 // inherit props
 const TagButton = (props) => {
     const tag = props.tag;
-    console.log("tag", tag)
+    // console.log("tag", tag)
 
     // // add query to end of the url
     // if(typeof window !== "undefined"){
@@ -16,14 +16,17 @@ const TagButton = (props) => {
     // if [] === all
     // if [hacks] === only hacks
     const getIndices = (arr) => {
+        console.log("tag", tag)
         let len = arr.length;
         let indices = []
         for (let i = 0; i < len; i++) {
             if (arr[i].includes(tag)) {
                 indices.push(i)
+                console.log(i)
             }
         }
         console.log(indices)
+        return indices
     }
 
     const updateUrl = () => {
@@ -63,7 +66,8 @@ const TagButton = (props) => {
             tagArr.push(liElems)
         }
         console.log(tagArr)
-        getIndices(tagArr)
+        let filteredArr = getIndices(tagArr);
+        console.log(filteredArr)
 
         
         //find the index where the string includes the tag being search
@@ -98,7 +102,6 @@ const TagButton = (props) => {
         <div className="button-container">
             <div className="tag-button" onClick={updateUrl}>{tag}</div>
         </div>
-        
     )
 }
 
