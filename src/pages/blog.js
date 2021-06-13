@@ -7,6 +7,7 @@ import TagSection from '../components/blog/tags/tag-section'
 import "../styles/blog.scss"
 import "../styles/index.scss"
 import { useState } from "react";
+import PostsSection from "../components/blog/posts-section.js";
 
 export default function BlogIndex ({data}) {
   const nodes = data.allMdx.nodes
@@ -15,7 +16,7 @@ export default function BlogIndex ({data}) {
 
   const [state, setState] = useState({
     filteredPosts: [],
-    query: "",
+    filters: [],
   })
 
   const getAllTags = (nodes) => {
@@ -24,13 +25,9 @@ export default function BlogIndex ({data}) {
       let articleTags = nodeData.frontmatter.tags
       return articleTags.map(tags => (
         tagList.push(tags)
-        
       ))
-
     })
-    // console.log(tagList)
     let uniqTags = new Set(tagList)
-    // console.log(uniqTags)
     return uniqTags;
   }
 
@@ -38,10 +35,8 @@ export default function BlogIndex ({data}) {
   // console.log("tags", tags)
 
   // create function in parent to handle state
-  const filterPosts = () => {
-    if (typeof window !== "undefined") {
-      // get data from url
-    }
+  const filterPosts = (filters) => {
+    setState({...state, filters: filters})
   }
 
   return (
@@ -51,21 +46,8 @@ export default function BlogIndex ({data}) {
       <h2 className="page-sub-header"> 
         I write about fullstack web development sprinkled with my favorite popular (even unpopular) cultural references
       </h2>
-      <TagSection tags={tags}/>
-      <ul id="blog-posts">
-        {data.allMdx.nodes.map(({ id, frontmatter}) => {
-          return (
-            <li className="article-list" key={id}>
-              <Link to={frontmatter.path}>{frontmatter.title}</Link>
-              <ul className="tag-list">
-                {frontmatter.tags.sort().map(tag => {
-                  return <li className="tag" key={tag + id}>{tag}</li>
-                })}
-              </ul>
-            </li>
-          )
-        })}
-      </ul>
+      <TagSection tags={tags} filter={filterPosts} />
+      <PostsSection nodes={nodes} filterTags={state.filters} />
     </Layout>
   )
 }

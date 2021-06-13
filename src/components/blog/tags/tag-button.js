@@ -15,59 +15,59 @@ const TagButton = (props) => {
     // create the state holding a query list
     // if [] === all
     // if [hacks] === only hacks
-    const getIndices = (arr) => {
-        console.log("tag", tag)
-        let len = arr.length;
-        let indices = []
-        for (let i = 0; i < len; i++) {
-            if (arr[i].includes(tag)) {
-                indices.push(i)
-                console.log(i)
-            }
-        }
-        console.log(indices)
-        return indices
-    }
+    // const getIndices = (arr) => {
+    //     // console.log("tag", tag)
+    //     let len = arr.length;
+    //     let indices = []
+    //     for (let i = 0; i < len; i++) {
+    //         if (arr[i].includes(tag)) {
+    //             indices.push(i)
+    //             console.log(i)
+    //         }
+    //     }
+    //     console.log(indices)
+    //     return indices
+    // }
 
-    const updateUrl = () => {
-        // console.log("clicked", tag);
-        let blogPosts = document.getElementById("blog-posts");
-        // console.log(blogPosts)
-        let articleList = blogPosts.getElementsByClassName("article-list");
-        // console.log(articleList)
-        let len = articleList.length
+    // const updateUrl = () => {
+    //     // console.log("clicked", tag);
+    //     let blogPosts = document.getElementById("blog-posts");
+    //     // console.log(blogPosts)
+    //     let articleList = blogPosts.getElementsByClassName("article-list");
+    //     // console.log(articleList)
+    //     let len = articleList.length
 
-        let tagList = [];
-        for (let i = 0; i < len; i++) {
-            let ul = articleList.item(i).getElementsByClassName("tag-list")
-            // tagList.push(articleList.item(i).getElementsByClassName("tag-list"))
-            // console.log(ul.item(0))
-            // just get tags????
-            let post = ul.item(0)
-            tagList.push(post.getElementsByClassName("tag"))
-            // console.log("lis", tags)
+    //     let tagList = [];
+    //     for (let i = 0; i < len; i++) {
+    //         let ul = articleList.item(i).getElementsByClassName("tag-list")
+    //         // tagList.push(articleList.item(i).getElementsByClassName("tag-list"))
+    //         // console.log(ul.item(0))
+    //         // just get tags????
+    //         let post = ul.item(0)
+    //         tagList.push(post.getElementsByClassName("tag"))
+    //         // console.log("lis", tags)
             
             
-            // let str = JSON.stringify(ul.item(0).outerHTML)
-            // console.log(str);
-            // tagList.push(str);
-        }
+    //         // let str = JSON.stringify(ul.item(0).outerHTML)
+    //         // console.log(str);
+    //         // tagList.push(str);
+    //     }
 
-        let tagArr = [];
-        for (let i = 0; i < len; i++) {
-            let j = 0;
-            let l = tagList[i].length
-            let liElems = []
-            for (j; j < l; j++) {
-                let item = tagList[i].item(j)
-                // console.log(item)
-                liElems.push(item.textContent)
-            }
-            tagArr.push(liElems)
-        }
-        console.log(tagArr)
-        let filteredArr = getIndices(tagArr);
-        console.log(filteredArr)
+    //     let tagArr = [];
+    //     for (let i = 0; i < len; i++) {
+    //         let j = 0;
+    //         let l = tagList[i].length
+    //         let liElems = []
+    //         for (j; j < l; j++) {
+    //             let item = tagList[i].item(j)
+    //             // console.log(item)
+    //             liElems.push(item.textContent)
+    //         }
+    //         tagArr.push(liElems)
+    //     }
+    //     console.log(tagArr)
+    //     let filteredArr = getIndices(tagArr);
+    //     console.log(filteredArr)
 
         
         //find the index where the string includes the tag being search
@@ -95,12 +95,12 @@ const TagButton = (props) => {
         // let tags = tagList.getElementsByClassName("tag")
         // console.log(tags)
         // update the window.location with a query
-    }
+    // }
 
 
     return(
         <div className="button-container">
-            <div className="tag-button" onClick={updateUrl}>{tag}</div>
+            <div className="tag-button" >{tag}</div>
         </div>
     )
 }

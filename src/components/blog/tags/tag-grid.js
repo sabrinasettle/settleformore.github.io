@@ -4,6 +4,7 @@ import TagButton from './tag-button'
 // https://stackoverflow.com/questions/48131100/react-render-array-of-components
 const TagGrid = (props) => {
     // console.log("props", props.tags)
+    console.log(props)
     const tags = props.tags;
     const [state, setState] = React.useState({
         chosenTags: [],
@@ -30,7 +31,7 @@ const TagGrid = (props) => {
 
 
     const addToState = (e) => {
-        console.log(e.target.textContent)
+        // console.log(e.target.textContent)
         const text = e.target.textContent;
         const tags = state.chosenTags;
         if (text !== "clear") {
@@ -40,9 +41,11 @@ const TagGrid = (props) => {
                 tags.splice(i, 1);
                 console.log(tags)
                 setState({...state, chosenTags: tags})
+                props.response(state.chosenTags)
             } else {
                 tags.push(text)
                 setState({...state, chosenTags: tags})
+                props.response(state.chosenTags)
             }
         }
         else {
