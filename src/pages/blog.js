@@ -57,7 +57,6 @@ export default function BlogIndex ({ data }) {
           filteredPosts.push(node)
       }
     })
-    console.log("new list", filteredPosts, filteredPosts.length)
     return filteredPosts;
   }
 

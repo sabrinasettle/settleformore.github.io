@@ -44,10 +44,8 @@ const TagGrid = (props) => {
         if (text === "clear") {
             clearTagFilters();
         } else {
-            // check to remove
             if (tags.includes(text)) {
                 let i = tags.indexOf(text)
-                console.log(tags)
                 tags.splice(i, 1);
                 if (tags.length === 0) {
                     clearTagFilters();
@@ -55,7 +53,6 @@ const TagGrid = (props) => {
                     addTagFilters(tags);
                 }
             } else {
-                // adds
                 tags.push(text)
                 addTagFilters(tags);
             }
