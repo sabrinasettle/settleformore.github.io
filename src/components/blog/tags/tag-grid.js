@@ -14,37 +14,50 @@ const TagGrid = (props) => {
 
         tags.forEach(tag => {
             if (state.chosenTags.includes(tag)) {
-                buttonArray.push(<TagButton id={tag} tag={tag} chosen={true} active={true}/>)
+                buttonArray.push(<TagButton id={tag} tag={tag} class={"tag-button-selected"}/>)
             } else {
-                buttonArray.push(<TagButton id={tag} tag={tag} chosen={false} active={false}/>)
+                buttonArray.push(<TagButton id={tag} tag={tag} selected={false} class={"tag-button"}/>)
             }
         })
 
         if (state.chosenTags.length !== 0 ){
-            buttonArray.push(<TagButton id="clear" tag="clear" />)
+            buttonArray.push(<TagButton id="clear" tag="clear" class={"tag-button"} />)
         }
 
         return buttonArray;
     }
 
+    const clearTagFilters = () => {
+        setState({...state, chosenTags: []})
+        props.response([]);
+    }
+
+    const addTagFilters = (tags) => {
+        setState({...state, chosenTags: tags})
+        props.response(state.chosenTags)
+    }
 
     const addFiltersToState = (e) => {
-        console.log("test", e.target.textContent);
+        // console.log("test", e.target.textContent);
         const text = e.target.textContent;
         const tags = state.chosenTags;
         if (text === "clear") {
-            setState({...state, chosenTags: []})
-            props.response([]);
+            clearTagFilters();
         } else {
+            // check to remove
             if (tags.includes(text)) {
                 let i = tags.indexOf(text)
+                console.log(tags)
                 tags.splice(i, 1);
-                setState({...state, chosenTags: tags})
-                props.response(state.chosenTags)
+                if (tags.length === 0) {
+                    clearTagFilters();
+                } else {
+                    addTagFilters(tags);
+                }
             } else {
+                // adds
                 tags.push(text)
-                setState({...state, chosenTags: tags})
-                props.response(state.chosenTags)
+                addTagFilters(tags);
             }
         }
     }

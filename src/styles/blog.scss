@@ -71,11 +71,26 @@ li.tag {
     position: relative;
 }
 
-.tag-button:hover {
-    // background-color: aqua;
+.tag-button:hover::after {
+    content: "";
+    border: 1px black solid;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
 }
 
-.tag-button:hover::after {
+.tag-button-selected {
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    border: 1px black solid;
+    white-space: nowrap;
+    position: relative;
+}
+
+.tag-button-selected::after {
     content: "";
     border: 1px black solid;
     position: absolute;

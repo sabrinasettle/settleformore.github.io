@@ -31,26 +31,24 @@ export default function BlogIndex ({ data }) {
   const tags = getAllTags(nodes);
 
   useEffect(() => {
-    console.log("useEffect", state.filters, state.filters.length)
     let list;
     if (state.filters.length !== 0) {
       list = filterPosts();
-      console.log("blog post list", list, list.length);
+      // console.log("blog post list", list, list.length);
     } else {
       list = nodes;
-      console.log("0", state.filters.length);
-      console.log("blog post list", list, list.length);
+      // console.log("blog post list", list, list.length);
     }
     setState({...state, posts: list})
   }, [state.filters])
 
   const setFilters = (filters) => {
-    console.log("setting filters", filters, filters.length);
+    // console.log("setting filters", filters, filters.length);
     setState({...state, filters: filters});
   }
 
+  // tweak the filtering so that if webdevelopment is chosen that can be filtered by algo
   const filterPosts = () => {
-    // the posts have the tags in the frontmatter.tags so I could alter a state array to 
     let filteredPosts = [];
     let list = nodes;
     list.map(node => {
