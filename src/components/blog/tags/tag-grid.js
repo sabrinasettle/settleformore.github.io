@@ -3,8 +3,6 @@ import TagButton from './tag-button'
 
 // https://stackoverflow.com/questions/48131100/react-render-array-of-components
 const TagGrid = (props) => {
-    // console.log("props", props.tags)
-    console.log(props)
     const tags = props.tags;
     const [state, setState] = React.useState({
         chosenTags: [],
@@ -30,16 +28,17 @@ const TagGrid = (props) => {
     }
 
 
-    const addToState = (e) => {
-        // console.log(e.target.textContent)
+    const addFiltersToState = (e) => {
+        console.log("test", e.target.textContent);
         const text = e.target.textContent;
         const tags = state.chosenTags;
-        if (text !== "clear") {
+        if (text === "clear") {
+            setState({...state, chosenTags: []})
+            props.response([]);
+        } else {
             if (tags.includes(text)) {
                 let i = tags.indexOf(text)
-                console.log(i)
                 tags.splice(i, 1);
-                console.log(tags)
                 setState({...state, chosenTags: tags})
                 props.response(state.chosenTags)
             } else {
@@ -48,16 +47,13 @@ const TagGrid = (props) => {
                 props.response(state.chosenTags)
             }
         }
-        else {
-            setState({...state, chosenTags: []})
-        }
     }
 
     const buttonArray = createButtonArray();
     return(
         <div id="tag-button-grid">
             {buttonArray.map((button, index) => (
-                <span key={index} onClick={addToState}>
+                <span key={index} onClick={addFiltersToState}>
                     {button}
                 </span>
             ))}

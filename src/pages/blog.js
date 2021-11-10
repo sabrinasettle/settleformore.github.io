@@ -1,21 +1,18 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Layout from "../components/layout.js"
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import TagSection from '../components/blog/tags/tag-section'
 // import SEO from 'react-seo-component';
 
 import "../styles/blog.scss"
 import "../styles/index.scss"
-import { useState } from "react";
 import PostsSection from "../components/blog/posts-section.js";
 
-export default function BlogIndex ({data}) {
+export default function BlogIndex ({ data }) {
   const nodes = data.allMdx.nodes
   
-  console.log(nodes)
-
   const [state, setState] = useState({
-    filteredPosts: [],
+    posts: nodes,
     filters: [],
   })
 
@@ -32,11 +29,38 @@ export default function BlogIndex ({data}) {
   }
 
   const tags = getAllTags(nodes);
-  // console.log("tags", tags)
 
-  // create function in parent to handle state
-  const filterPosts = (filters) => {
-    setState({...state, filters: filters})
+  useEffect(() => {
+    console.log("useEffect", state.filters, state.filters.length)
+    let list;
+    if (state.filters.length !== 0) {
+      list = filterPosts();
+      console.log("blog post list", list, list.length);
+    } else {
+      list = nodes;
+      console.log("0", state.filters.length);
+      console.log("blog post list", list, list.length);
+    }
+    setState({...state, posts: list})
+  }, [state.filters])
+
+  const setFilters = (filters) => {
+    console.log("setting filters", filters, filters.length);
+    setState({...state, filters: filters});
+  }
+
+  const filterPosts = () => {
+    // the posts have the tags in the frontmatter.tags so I could alter a state array to 
+    let filteredPosts = [];
+    let list = nodes;
+    list.map(node => {
+      let postTags = node.frontmatter.tags;
+      if (postTags.some(r => state.filters.includes(r))) {
+          filteredPosts.push(node)
+      }
+    })
+    console.log("new list", filteredPosts, filteredPosts.length)
+    return filteredPosts;
   }
 
   return (
@@ -46,14 +70,11 @@ export default function BlogIndex ({data}) {
       <h2 className="page-sub-header"> 
         I write about fullstack web development sprinkled with my favorite popular (even unpopular) cultural references
       </h2>
-      <TagSection tags={tags} filter={filterPosts} />
-      <PostsSection nodes={nodes} filterTags={state.filters} />
+      <TagSection tags={tags} setFilters={setFilters} />
+      <PostsSection posts={state.posts} filterTags={state.filters} />
     </Layout>
   )
 }
-
-// export default BlogIndex
-
 
 export const pageQuery = graphql`
   query blogIndex {

@@ -56,6 +56,7 @@ https://freshman.tech/css-grid-calculator/
 [Glue work or what being Senior can look like](https://noidea.dog/glue)
 
 ### Git Gud (Or self-learning)?
+[Understanding how to what "What": The art of naming variables](https://hackernoon.com/the-art-of-naming-variables-52f44de00aad)
 [Learn to Program, som basics](https://pine.fm/LearnToProgram/)
 [Breadth and Depth](https://hired.com/blog/candidates/balance-breadth-depth-learning-software-development/)
 [A Reddit discussion on expected or standard knowledge](https://www.reddit.com/r/webdev/comments/ls3abk/what_is_the_standard_or_expected_knowledge_base/)
