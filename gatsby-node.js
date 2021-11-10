@@ -48,17 +48,17 @@ exports.createPages = async ({ actions, graphql }) => {
 
     // tags = tags.uniq(tags);
 
-    const tags = result.data.tagsGroup.group
+    // const tags = result.data.tagsGroup.group
 
-    tags.forEach(tag => {
-      createPage({
-        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-        component: tagTemplate,
-        context: {
-          tag: tag.fieldValue,
-        }
-      })
-    })
+    // tags.forEach(tag => {
+    //   createPage({
+    //     path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+    //     component: tagTemplate,
+    //     context: {
+    //       tag: tag.fieldValue,
+    //     }
+    //   })
+    // })
   })
 
   // ATTEMPT
