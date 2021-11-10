@@ -1,15 +1,14 @@
-import { Link } from 'gatsby';
 import React from 'react'
 
 // inherit props
 const TagButton = (props) => {
     const tag = props.tag;
-    console.log("tag", tag)
+    const selected = props.selected;
+    
     return(
         <div className="button-container">
-            <div className="tag-button">{tag}</div>
+            <div className={props.class} >{tag}</div>
         </div>
-        
     )
 }
 

@@ -1,3 +1,6 @@
+### Be Kind (or things to think about while learning)
+[Fixed Mindset VS Growth Mindset](https://www.techtello.com/fixed-mindset-vs-growth-mindset/)
+
 ### Markdown
 [Markdown](https://commonmark.org/help/)
 
@@ -31,11 +34,15 @@ https://freshman.tech/css-grid-calculator/
 [React as a UI Runtime; Not Beginner Friendly](https://overreacted.io/react-as-a-ui-runtime/)
 [CSS in React](https://medium.com/@dmitrynozhenko/9-ways-to-implement-css-in-react-js-ccea4d543aa3)
 [Animation Libraries](https://blog.logrocket.com/the-top-5-react-animation-libraries-compared/)
+[Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+[A suggestion on constructing React apps](https://blog.usejournal.com/how-i-structure-my-react-apps-86e897054593)
+[Architecting a React app](https://blog.usejournal.com/architecting-your-react-application-5af9cd65a891)
 
 ### Better React
 [7 steps to modernize and optimize a react app](https://javascript.plainenglish.io/7-steps-to-modernize-and-optimize-your-react-app-466cbea51b8f)
 [The atomic structure design principles](https://bradfrost.com/blog/post/atomic-web-design/)
 [The book on it as well](https://atomicdesign.bradfrost.com/chapter-1/)
+[](https://medium.com/swlh/decoupling-logic-from-react-components-f6035646c275)
 
 ### Other Frontend
 [Some cool things to know](https://javascript.plainenglish.io/11-frontend-tricks-that-most-frontend-developers-dont-know-about-68dc48199ed6)
@@ -49,6 +56,7 @@ https://freshman.tech/css-grid-calculator/
 [Glue work or what being Senior can look like](https://noidea.dog/glue)
 
 ### Git Gud (Or self-learning)?
+[Understanding how to what "What": The art of naming variables](https://hackernoon.com/the-art-of-naming-variables-52f44de00aad)
 [Learn to Program, som basics](https://pine.fm/LearnToProgram/)
 [Breadth and Depth](https://hired.com/blog/candidates/balance-breadth-depth-learning-software-development/)
 [A Reddit discussion on expected or standard knowledge](https://www.reddit.com/r/webdev/comments/ls3abk/what_is_the_standard_or_expected_knowledge_base/)
@@ -62,3 +70,7 @@ https://freshman.tech/css-grid-calculator/
 
 ### A11y
 [Some considerations for creating accessibility](https://web.dev/accessible/)
+
+### Javascript
+[How to Use Fetch with async/await](https://dmitripavlutin.com/javascript-fetch-async-await/)
+[Promises](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1)

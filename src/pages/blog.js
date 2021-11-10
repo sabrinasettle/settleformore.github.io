@@ -1,15 +1,20 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Layout from "../components/layout.js"
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import TagSection from '../components/blog/tags/tag-section'
 // import SEO from 'react-seo-component';
 
 import "../styles/blog.scss"
 import "../styles/index.scss"
+import PostsSection from "../components/blog/posts-section.js";
 
-export default function BlogIndex ({data}) {
+export default function BlogIndex ({ data }) {
   const nodes = data.allMdx.nodes
-  // console.log(nodes)
+  
+  const [state, setState] = useState({
+    posts: nodes,
+    filters: [],
+  })
 
   const getAllTags = (nodes) => {
     let tagList = [];
@@ -17,18 +22,44 @@ export default function BlogIndex ({data}) {
       let articleTags = nodeData.frontmatter.tags
       return articleTags.map(tags => (
         tagList.push(tags)
-        
       ))
-
     })
-    // console.log(tagList)
     let uniqTags = new Set(tagList)
-    // console.log(uniqTags)
     return uniqTags;
   }
 
   const tags = getAllTags(nodes);
-  // console.log("tags", tags)
+
+  useEffect(() => {
+    let list;
+    if (state.filters.length !== 0) {
+      list = filterPosts();
+      // console.log("blog post list", list, list.length);
+    } else {
+      list = nodes;
+      // console.log("blog post list", list, list.length);
+    }
+    setState({...state, posts: list})
+  }, [state.filters])
+
+  const setFilters = (filters) => {
+    // console.log("setting filters", filters, filters.length);
+    setState({...state, filters: filters});
+  }
+
+  // tweak the filtering so that if webdevelopment is chosen that can be filtered by algo
+  const filterPosts = () => {
+    let filteredPosts = [];
+    let list = nodes;
+    list.map(node => {
+      let postTags = node.frontmatter.tags;
+      if (postTags.some(r => state.filters.includes(r))) {
+          filteredPosts.push(node)
+      }
+    })
+    return filteredPosts;
+  }
+
   return (
     <Layout>
       <h1 className="page-header">
@@ -36,27 +67,11 @@ export default function BlogIndex ({data}) {
       <h2 className="page-sub-header"> 
         I write about fullstack web development sprinkled with my favorite popular (even unpopular) cultural references
       </h2>
-      <TagSection tags={tags}/>
-      <ul id="blog-posts">
-        {data.allMdx.nodes.map(({ id, frontmatter}) => {
-          return (
-            <li className="article-list" key={id}>
-              <Link to={frontmatter.path}>{frontmatter.title}</Link>
-              <ul className="tag-list">
-                {frontmatter.tags.sort().map(tag => {
-                  return <li className="tag" key={tag + id}>{tag}</li>
-                })}
-              </ul>
-            </li>
-          )
-        })}
-      </ul>
+      <TagSection tags={tags} setFilters={setFilters} />
+      <PostsSection posts={state.posts} filterTags={state.filters} />
     </Layout>
   )
 }
-
-// export default BlogIndex
-
 
 export const pageQuery = graphql`
   query blogIndex {
@@ -75,3 +90,30 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// query MyQuery {
+//   allMdx {
+//     group(field: frontmatter___tags) {
+//       tag: fieldValue
+//       totalCount
+//     }
+//   }
+// }
+
+
+/// query from 
+// export const PageQuery = graphql`
+//     query {
+//         site {
+//             siteMetadata {
+//                 title
+//             }
+//         }
+//         allMarkdownRemark(limit: 2000) {
+//             group(field: frontmatter___tags) {
+//                 fieldValue
+//                 totalCount
+//             }
+//         }
+//     }
+// `
