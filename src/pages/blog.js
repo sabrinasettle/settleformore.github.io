@@ -6,7 +6,7 @@ import TagSection from '../components/blog/tags/tag-section'
 
 import "../styles/blog.scss"
 import "../styles/index.scss"
-import PostsSection from "../components/blog/posts-section.js";
+import PostsSection from "../components/blog/PostsSection.js";
 
 export default function BlogIndex ({ data }) {
   const nodes = data.allMdx.nodes

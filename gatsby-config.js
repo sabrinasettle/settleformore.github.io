@@ -32,6 +32,13 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
+                path: `${__dirname}/content/resources/`,
+                name: `resources`,
+            },
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
                 path: `${__dirname}/src/templates/`,
                 name: `templates`,
             },
@@ -61,7 +68,7 @@ module.exports = {
             resolve: 'gatsby-plugin-mdx',
             options: {
               extensions: ['.mdx', '.md'],
-              defaultLayout: require.resolve('./src/components/blog/blog-post-layout.js'),
+              defaultLayout: require.resolve('./src/components/blog/BlogPostLayout.js'),
             },
         },
         {

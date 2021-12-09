@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import MainNav from './home_nav'
+import MainNav from './Nav'
 
 const Main = () => {
     return (

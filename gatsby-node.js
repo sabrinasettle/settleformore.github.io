@@ -5,7 +5,6 @@ const _ = require("lodash")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`./src/templates/post.js`)
-  const tagTemplate = path.resolve(`./src/templates/tags.js`)
 
   return graphql(`
      {
@@ -34,7 +33,6 @@ exports.createPages = async ({ actions, graphql }) => {
       Promise.reject(result.errors)
     }
 
-    // let tags = [];
     result.data.postsRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
@@ -43,22 +41,7 @@ exports.createPages = async ({ actions, graphql }) => {
           pathSlug: node.frontmatter.path,
         },
       })
-      // tags = tags.concat(node.frontmatter.tags)
     })
-
-    // tags = tags.uniq(tags);
-
-    // const tags = result.data.tagsGroup.group
-
-    // tags.forEach(tag => {
-    //   createPage({
-    //     path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-    //     component: tagTemplate,
-    //     context: {
-    //       tag: tag.fieldValue,
-    //     }
-    //   })
-    // })
   })
 
   // ATTEMPT

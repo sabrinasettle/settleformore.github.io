@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout.js"
 import Image from "../components/about/Image.js"
-import AboutMe from "../components/about/aboutMe.js"
+import AboutMe from "../components/about/AboutMe.js"
 
 // import Contact from "../components/about/contact.js"
 

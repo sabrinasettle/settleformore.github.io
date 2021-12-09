@@ -26,25 +26,22 @@ OR
 ``` npm run dev```
 
 ### To Do
-- [ ] Change layout of about page
-- [x] Add portfolio/work to index page
-- [x] Add ability to access the most recent resume from Canva.com
 - [ ] Add Google analytics details to gatsby-config.js
 - [ ] if that works remove the google analytics from components/seo.js
 - [ ] Finish the dynamic SEO for posts
-- [x] Add links to work if possible
+- [ ] Add link to AssetDash
 - [ ] Change font size on About page
-- [ ] Fix up the image overlay to be more centered than before
-- [x] Animate line on hover of header nav links 
+- [ ] Fix up the image overlay to be more centered than before 
 - [ ] Finish resources page
+- [ ] Sort the Work experience by dates
+- [ ] Add a section for projects vs work
+- [ ] Change 42 silicon valley work to internship
 
 
 #### Posts
 - [ ] fix circular refernce at end of Surronded by Idiots book review
-- [ ] 
 
 #### About Me
 - [ ] Add images of art work (weavings, binary knitting)
 - [ ] Unconventional background needs more linking in??? Maybe?
 - [ ] Web icon change
-- [ ] 

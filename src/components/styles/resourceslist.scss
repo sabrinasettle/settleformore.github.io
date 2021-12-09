@@ -1,0 +1,14 @@
+#resource_list{
+    a {
+        font-size: 1em;
+    }
+
+    a::before{
+        content: "*";
+    }
+
+    h2 {
+        border-bottom: black 1px solid;
+        font-weight: bolder;
+    }
+}
