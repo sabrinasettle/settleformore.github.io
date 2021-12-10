@@ -9,11 +9,6 @@ export default function Resources({ data }) {
     const listBody = list.childMarkdownRemark.html
 
     // const sectionArray = ["A11y", "APIs", "Learning", "Better React", "React", "CSS", "Frontend", "Data", "Git Gud", "HTML", "Interviewing", "Javascript", "Roadmap", "URL/URI?"];
-    if (data) {
-        console.log(data)
-        console.log(data.allFile.edges)
-        console.log(list.node)
-    }
 
     return (
         <Layout>

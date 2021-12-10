@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby'
 
-const List = ({data}) => {
+const List = ({ data }) => {
+  console.log(data)
     const array = data.allMarkdownRemark.edges
     return (<div className="work-section">
       <h1 className='section-header'>Work</h1>
@@ -45,7 +46,7 @@ const Portfolio = (props) => {
           query={graphql`
               query {
               allMarkdownRemark(
-                filter: {frontmatter: {type: {eq: "work"}}}
+                filter: {frontmatter: {type: {eq: "work"}}}, sort: {fields: frontmatter___title}
               ) {
                   edges {
                     node {
