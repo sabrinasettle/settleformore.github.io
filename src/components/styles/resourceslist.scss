@@ -1,14 +1,27 @@
 #resource_list{
+
+    width: 100%;
     a {
-        font-size: 1em;
+        font-size: 1em; 
     }
 
     a::before{
-        content: "*";
+        content: " -//- ";
+        font-weight: bolder;
     }
 
     h2 {
+        width: 60%;
         border-bottom: black 1px solid;
         font-weight: bolder;
+        padding-top: 1em;
+    }
+}
+
+#resources_list_intro{
+    width: 60%;
+    p {
+        font-size: 1.3em;
+        font-weight: 500;
     }
 }

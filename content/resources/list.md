@@ -10,7 +10,7 @@
 ## APIs
 [Types of APIs](https://rapidapi.com/blog/types-of-apis/)
 
-[Understanding RESTfil APIs](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)
+[Understanding RESTful APIs](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)
 
 [REST tutorial](https://www.freecodecamp.org/news/rest-api-tutorial-rest-client-rest-service-and-api-calls-explained-with-code-examples/)
 
@@ -20,19 +20,23 @@
 
 ## Better React
 [7 steps to modernize and optimize a react app](https://javascript.plainenglish.io/7-steps-to-modernize-and-optimize-your-react-app-466cbea51b8f)
+
 [The atomic structure design principles](https://bradfrost.com/blog/post/atomic-web-design/)
+
 [The book on it as well](https://atomicdesign.bradfrost.com/chapter-1/)
+
 [Decoupling logic from React components](https://medium.com/swlh/decoupling-logic-from-react-components-f6035646c275)
 
 ## CSS (SASS and SCSS also)
 [CSS Tricks](https://chiplempke.medium.com/four-simple-css-tips-da3e5a715512)
-https://css-irl.info/animating-underlines/
 
-https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
+[Animating underlines](https://css-irl.info/animating-underlines/)
 
-https://css-tricks.com/dont-overthink-flexbox-grids/
+[Animated wrapping underline tutorial](https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline)
 
-https://freshman.tech/css-grid-calculator/
+[Flexbox grids! fuck yeah!](https://css-tricks.com/dont-overthink-flexbox-grids/)
+
+[Grid Calculater](https://freshman.tech/css-grid-calculator/)
 
 ## Data 
 [Graphql advantages and disadvantages](https://stablekernel.com/article/advantages-and-disadvantages-of-graphql/#:~:text=GraphQL%20offers%20many%20benefits%20over,data%20in%20a%20predictable%20way.&text=Now%20let's%20say%20that%20you,get%20a%20User%20's%20name.)
@@ -54,6 +58,7 @@ https://freshman.tech/css-grid-calculator/
 
 ## HTML
 [Role Attribute 1](https://www.w3.org/WAI/PF/HTML/wiki/RoleAttribute)
+
 [Role Attribute 2](https://www.freecodecamp.org/news/html-role-attribute/)
 
 ## Interviewing 
@@ -63,7 +68,6 @@ https://freshman.tech/css-grid-calculator/
 
 ## Javascript
 [How to Use Fetch with async/await](https://dmitripavlutin.com/javascript-fetch-async-await/)
-
 [Promises](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1)
 
 ## Markdown
@@ -71,14 +75,20 @@ https://freshman.tech/css-grid-calculator/
 
 ## Other Frontend
 [Some cool things to know](https://javascript.plainenglish.io/11-frontend-tricks-that-most-frontend-developers-dont-know-about-68dc48199ed6)
+
 [Setting up Frontend Guildlines by Brad Frost](https://github.com/bradfrost/frontend-guidelines-questionnaire)
 
 ## React
 [React as a UI Runtime; Not Beginner Friendly](https://overreacted.io/react-as-a-ui-runtime/)
+
 [CSS in React](https://medium.com/@dmitrynozhenko/9-ways-to-implement-css-in-react-js-ccea4d543aa3)
+
 [Animation Libraries](https://blog.logrocket.com/the-top-5-react-animation-libraries-compared/)
+
 [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+
 [A suggestion on constructing React apps](https://blog.usejournal.com/how-i-structure-my-react-apps-86e897054593)
+
 [Architecting a React app](https://blog.usejournal.com/architecting-your-react-application-5af9cd65a891)
 
 ## Roadmap
