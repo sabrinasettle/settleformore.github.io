@@ -1,6 +1,6 @@
 # About
 
-Code stored at psc master(Personal Site Code) with its deployed version at the master of settleformore.github.io
+Code stored at psc master(Portfolio Site Code) with its deployed version at the master of settleformore.github.io
 
 # What This Is
 
@@ -29,19 +29,10 @@ OR
 - [ ] Add Google analytics details to gatsby-config.js
 - [ ] if that works remove the google analytics from components/seo.js
 - [ ] Finish the dynamic SEO for posts
-- [ ] Add link to AssetDash
-- [ ] Change font size on About page
-- [ ] Fix up the image overlay to be more centered than before 
-- [ ] Finish resources page
 - [ ] Sort the Work experience by dates
-- [ ] Add a section for projects vs work
 - [ ] Change 42 silicon valley work to internship
 
 
 #### Posts
 - [ ] fix circular refernce at end of Surronded by Idiots book review
 
-#### About Me
-- [ ] Add images of art work (weavings, binary knitting)
-- [ ] Unconventional background needs more linking in??? Maybe?
-- [ ] Web icon change

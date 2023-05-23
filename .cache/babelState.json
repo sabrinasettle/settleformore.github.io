@@ -7,10 +7,6 @@
           "options": {}
         },
         {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-          "options": {}
-        },
-        {
           "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -43,10 +39,6 @@
       "plugins": [
         {
           "name": "babel-plugin-lodash",
-          "options": {}
-        },
-        {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
@@ -85,10 +77,6 @@
           "options": {}
         },
         {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-          "options": {}
-        },
-        {
           "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -124,10 +112,6 @@
           "options": {}
         },
         {
-          "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-          "options": {}
-        },
-        {
           "name": "/Users/sabrina/Desktop/settleformore.github.io/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -158,7 +142,7 @@
     }
   },
   "browserslist": [
-    ">0.25%",
-    "not dead"
+    ">0.25% and supports es6-module",
+    "not dead and supports es6-module"
   ]
 }

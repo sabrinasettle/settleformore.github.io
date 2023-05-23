@@ -1,0 +1,18 @@
+$font-primary: 'Nimbus Sans L', sans-serif;
+$name-font: 'Maginia', serif;
+
+@font-face {
+    font-family: 'Nimbus Sans L';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/NimbusSanL-Reg.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Maginia';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/MaginiaRegular-BWP6x.otf') format('otf');
+}
