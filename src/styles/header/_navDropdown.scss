@@ -1,0 +1,63 @@
+$gradient-dark: #ABAE9C; // 36.98%
+$gradient-3: rgba(171, 174, 156, 0.69); // 60.94%
+$gradient-2: rgba(171, 174, 156, 0.5802); // 71.88%
+$gradient-1: rgba(171, 174, 156, 0.417); // 85.94%
+$gradient-0: rgba(171, 174, 156, 0); // 100%
+
+#circle-icon {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #252525;
+    display: inline-block;
+    position: absolute;
+    
+}
+
+.page-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    display: inline-block;
+    padding-right: 33px;
+    padding-top: 5px;
+    vertical-align: middle;
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.dropdown-menu {
+
+}
+
+#gradient-background-dropdown-menu{
+    background: radial-gradient(95.26% 95.26% at 100% 0%, #ABAE9C 36.98%, rgba(171, 174, 156, 0.69) 60.94%, rgba(171, 174, 156, 0.580189) 71.88%, rgba(171, 174, 156, 0.416978) 85.94%, rgba(171, 174, 156, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background-blend-mode: darken;
+    // filter: blur(15px);
+    width: 310px;
+    // height: 464px;
+    mix-blend-mode: darken;
+}
+
+#page-title-dropdown {
+    display: inline-block;
+    padding-top: 14px;
+    padding-right: 14px;
+    display: flex; 
+    justify-content: flex-end;
+}
+
+
+.dropdown-menu-nav-links {
+ 
+}
+
+#gradient-menu-background {
+    // Fill: Radial Gradient
+    // Blend: Darken
+}
+
+.menu-list {
+
+}

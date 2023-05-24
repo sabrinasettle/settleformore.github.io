@@ -1,6 +1,22 @@
 @import 'partials/typography';
 
+$text-color: #252525;
+$main-page-backgorund: #BCC3BD;
+$portfolio-page-background: #E9E7DE;
 
 body {
     font-family: $font-primary;
+    color: $text-color;
+
+    a {
+        color: $text-color;
+    }
+}
+
+body#home-page {
+    background: $main-page-backgorund
+}
+
+#home-page {
+    background: $main-page-backgorund
 }
