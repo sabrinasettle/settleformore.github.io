@@ -1,6 +1,7 @@
 import React from "react"
 import Logo from "./logo"
 import Nav from "./nav"
+import '../../styles/header.scss'
 
 export default function Header() {
 
@@ -18,11 +19,11 @@ export default function Header() {
     }
 
     return (
-        <div>
-            <div>
+        <header className="main-header">
+            <div className="container">
                 <Logo/>
                 <Nav pageName={getPageName()} />
             </div>
-        </div>
+        </header>
     )
 }

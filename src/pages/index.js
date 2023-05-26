@@ -8,7 +8,6 @@ export default function Index() {
         <body id="home-page">
             <div id="home-page">
                 <Header />
-                <h1>HomePage</h1>
             </div>
         </body>
     )

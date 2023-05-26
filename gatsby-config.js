@@ -9,5 +9,19 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-sass`,
+        "gatsby-plugin-catch-links",
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              path: `${__dirname}/content/case-studies`,
+              name: "case studies"
+            }
+        },
+        {
+            resolve: "gatsby-transformer-remark",
+            options: {
+              plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+            }
+        },
     ],
   }

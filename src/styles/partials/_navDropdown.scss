@@ -27,37 +27,56 @@ $gradient-0: rgba(171, 174, 156, 0); // 100%
     margin-right: 0;
 }
 
-.dropdown-menu {
+// filter: blur(15px);
+// height: 464px;
 
+.menu-container {
+    padding-right: 14px;
+    padding-top: 14px;
+    width: 310px;
+    // display: flex;
+    // flex: 1 0 auto;
+    float: right;
+    justify-content: flex-end;
+    margin: 0;
 }
 
 #gradient-background-dropdown-menu{
     background: radial-gradient(95.26% 95.26% at 100% 0%, #ABAE9C 36.98%, rgba(171, 174, 156, 0.69) 60.94%, rgba(171, 174, 156, 0.580189) 71.88%, rgba(171, 174, 156, 0.416978) 85.94%, rgba(171, 174, 156, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     background-blend-mode: darken;
-    // filter: blur(15px);
-    width: 310px;
-    // height: 464px;
     mix-blend-mode: darken;
 }
 
-#page-title-dropdown {
-    display: inline-block;
-    padding-top: 14px;
-    padding-right: 14px;
+#dropdown-toggle {
     display: flex; 
     justify-content: flex-end;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #252525;
 }
 
-
-.dropdown-menu-nav-links {
- 
+#dropdown-toggle:hover {
+    
 }
 
-#gradient-menu-background {
-    // Fill: Radial Gradient
-    // Blend: Darken
+.dropdown-menu {
+    margin-left: auto;
+    text-decoration: none;
+    list-style: none;
+    z-index: 9999;
+    margin-top: 44px;
+    margin-bottom: 144px;
 }
 
-.menu-list {
-
+li {
+    padding-right: 2px;
+    padding-bottom: 20px;
+    text-align: right;
+    a {
+        font-size: 20px;
+        line-height: 24px;
+        text-decoration: none;
+    }
 }
