@@ -5,6 +5,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    position: absolute;
 }
 
 .header-logo {
@@ -22,6 +23,7 @@ header {
 .container {
 	width: 100vw;
 	margin: 0 auto;
+    z-index: 9999;
 }
 
 .main-header .container {

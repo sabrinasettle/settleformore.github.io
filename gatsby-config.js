@@ -9,7 +9,10 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-sass`,
-        "gatsby-plugin-catch-links",
+        `gatsby-plugin-catch-links`,
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {

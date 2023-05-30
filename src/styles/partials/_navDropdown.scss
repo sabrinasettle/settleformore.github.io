@@ -29,13 +29,13 @@ $gradient-0: rgba(171, 174, 156, 0); // 100%
 
 // filter: blur(15px);
 // height: 464px;
+.dropdown-menu-nav {
+}
 
 .menu-container {
     padding-right: 14px;
     padding-top: 14px;
     width: 310px;
-    // display: flex;
-    // flex: 1 0 auto;
     float: right;
     justify-content: flex-end;
     margin: 0;
@@ -65,7 +65,7 @@ $gradient-0: rgba(171, 174, 156, 0); // 100%
     margin-left: auto;
     text-decoration: none;
     list-style: none;
-    z-index: 9999;
+    
     margin-top: 44px;
     margin-bottom: 144px;
 }

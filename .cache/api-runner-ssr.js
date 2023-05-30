@@ -1,4 +1,8 @@
 var plugins = [{
+      name: 'gatsby-plugin-image',
+      plugin: require('/Users/sabrina/Desktop/settleformore.github.io/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
+      options: {"plugins":[]},
+    },{
       name: 'default-site-plugin',
       plugin: require('/Users/sabrina/Desktop/settleformore.github.io/gatsby-ssr.js'),
       options: {"plugins":[]},
